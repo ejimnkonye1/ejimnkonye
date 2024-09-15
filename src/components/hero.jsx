@@ -25,7 +25,7 @@ function Navbar() {
           </a>
         </div>
         <div className="flex items-center">
-          <a href="#" className="text-sm text-gray-200 hover:text-white transition duration-300 ease-in-out mx-4">
+          <a href="#home" className="text-sm text-gray-200 hover:text-white transition duration-300 ease-in-out mx-4">
             Home
           </a>
           <a href="#" className="text-sm text-gray-200 hover:text-white transition duration-300 ease-in-out mx-4">
@@ -136,7 +136,7 @@ function About() {
 }
   function Projects (){
     return(
-      <div className="bg-gray-100 min-h-screen p-8">
+      <div className="bg-white-100 min-h-screen p-8">
   <div className="container mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       
@@ -179,78 +179,5 @@ function About() {
 
     )
   }
-  function Stack(){
-    return(
-      <div className="bg-gray-100 min-h-screen p-8">
-  <div className="container mx-auto">
-    <h2 className="text-3xl font-bold text-center mb-8">Tech Stages</h2>
-    
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-      
-      {/* Column 1 */}
-      <div className="text-center">
-        <img 
-          src="https://via.placeholder.com/150" 
-          alt="Tech Stage 1" 
-          className="rounded-lg shadow-lg w-full h-auto object-cover mb-4"
-        />
-        <p className="text-gray-700 font-semibold">Tech Stage 1</p>
-      </div>
-      
-      {/* Column 2 */}
-      <div className="text-center">
-        <img 
-          src="https://via.placeholder.com/150" 
-          alt="Tech Stage 2" 
-          className="rounded-lg shadow-lg w-full h-auto object-cover mb-4"
-        />
-        <p className="text-gray-700 font-semibold">Tech Stage 2</p>
-      </div>
-      
-      {/* Column 3 */}
-      <div className="text-center">
-        <img 
-          src="https://via.placeholder.com/150" 
-          alt="Tech Stage 3" 
-          className="rounded-lg shadow-lg w-full h-auto object-cover mb-4"
-        />
-        <p className="text-gray-700 font-semibold">Tech Stage 3</p>
-      </div>
-      
-      {/* Column 4 */}
-      <div className="text-center">
-        <img 
-          src="https://via.placeholder.com/150" 
-          alt="Tech Stage 4" 
-          className="rounded-lg shadow-lg w-full h-auto object-cover mb-4"
-        />
-        <p className="text-gray-700 font-semibold">Tech Stage 4</p>
-      </div>
-      
-      {/* Column 5 */}
-      <div className="text-center">
-        <img 
-          src="https://via.placeholder.com/150" 
-          alt="Tech Stage 5" 
-          className="rounded-lg shadow-lg w-full h-auto object-cover mb-4"
-        />
-        <p className="text-gray-700 font-semibold">Tech Stage 5</p>
-      </div>
-      
-      {/* Column 6 */}
-      <div className="text-center">
-        <img 
-          src="https://via.placeholder.com/150" 
-          alt="Tech Stage 6" 
-          className="rounded-lg shadow-lg w-full h-auto object-cover mb-4"
-        />
-        <p className="text-gray-700 font-semibold">Tech Stage 6</p>
-      </div>
 
-    </div>
-  </div>
-</div>
-
-    )
-  }
-  export {HeroSection, Navbar, Test, About, Projects, Stack};
+  export {HeroSection, Navbar, Test, About, Projects, };

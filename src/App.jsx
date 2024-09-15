@@ -1,5 +1,6 @@
 import { Footer } from "./components/Footer";
-import { About, HeroSection, Projects, Stack, Test } from "./components/hero";
+import { About, HeroSection, Projects,  Test } from "./components/hero";
+import { Stack } from "./components/stack";
 
 function App() {
   return (
