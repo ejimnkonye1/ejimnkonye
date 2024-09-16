@@ -1,33 +1,39 @@
-
+/* eslint-disable react/no-unescaped-entities */
+import img from '../images/image.png'
+import img1 from '../images/image (1).png'
 export const  About = () => {
+  
     return(
-      <div className=" min-h-screen p-8">
-    <div className="container mx-auto">
+      <section className="" style={style.top}>
+   <div className=" min-h-screen p-8">
+    <div className="container mx-auto p-8">
     <h2 className="text-3xl font-bold mb-4">About Me</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         
         <div className="flex justify-center">
           <img 
-            src="https://via.placeholder.com/400" 
+            src={img1}
             alt="About Me" 
-            className="rounded-lg shadow-lg w-full h-auto object-cover"
+            className="rounded-lg  w-full h-auto object-cover"
           />
         </div>
   
         {/* Column 2: About Me */}
         <div>
        
-          <p className="text-gray-700 mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum velit eget erat porttitor, sed tempor justo finibus. Fusce sit amet libero eu magna volutpat viverra. 
+          <p className="text-gray-700 mb-4" style={style.about}>
+          Hi there! I'm Ejimnkonye Onyedika, a web developer from Nigeria with 2 years of experience. Although I've been involved in web development for a while,
+          my passion truly blossomed when I decided to take it seriously.
+          Coding, and playing football manager  fill my days with excitement
           </p>
           <p className="text-gray-700 mb-4">
-            Vivamus fringilla nisl ac elit pharetra, a sodales justo gravida. Duis sit amet urna in elit tincidunt malesuada. Mauris ultricies ligula non risus fermentum, ut dignissim lectus varius.
+      
           </p>
-          <p className="text-gray-700">
-            Nam lacinia, libero vitae consequat venenatis, nulla purus sollicitudin augue, at aliquet neque lorem ac ante. In hac habitasse platea dictumst. In euismod ex nec ullamcorper laoreet.
+          <p className="text-gray-700" style={style.about}>
+          Beyond web development, I enjoy watching movies, playing video games, and listening to music
           </p>
           <div className="mt-2">
-            <button className="rounded-full bg-blue-600 px-4 py-2 text-white font-semibold ">
+            <button className=" bg-blue-600  text-white " style={style.aboutBtn}>
                 send me a message
             </button>
           </div>
@@ -35,6 +41,36 @@ export const  About = () => {
       </div>
     </div>
   </div>
+      </section>
+   
   
     )
   }
+  const style = {
+    top:{
+    
+        borderTop: '2px solid black',
+        margin: '1rem 0',
+        padding: '1rem 0',
+   
+  },
+  about: {
+    fontSize: '1.2rem',  // Fixed typo from font-siz to fontSize
+    fontFamily: 'gotham',
+    letterSpacing: '-0.5px',
+    lineHeight: '1.4',
+
+    margin: '0 0 2rem',
+  },
+  aboutBtn: {
+    backgroundColor: '#457AD4;',
+    color: 'rgb(255, 255, 255)',
+    boxShadow: 'rgb(0, 0, 0) 4px 3px',
+    fontSize: '1.1rem',
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderColor: 'black',
+    padding: '0.6rem 0.4rem',
+    borderRadius: '0.3rem',
+  },
+}

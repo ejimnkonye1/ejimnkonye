@@ -11,6 +11,7 @@ function App() {
   {/* <Test /> */}
   <Stack />
   <Projects />
+  
   <About/>
   <Footer />
 </div>
