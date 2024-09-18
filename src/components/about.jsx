@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import img from '../images/image.png'
+
 import img1 from '../images/image (1).png'
 export const  About = () => {
   

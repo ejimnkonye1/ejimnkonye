@@ -1,7 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
 import img from '../assets/background.png'
+import { RxHamburgerMenu } from "react-icons/rx";
+import { MdOutlineCancel } from "react-icons/md";
+import { useState } from 'react';
 function HeroSection() {
   return (
-    <div className="h-screen bg-blue-700">
+    <div className="h-screen  bg-blue-700">
         <Navbar />
       <div className="container mx-auto p-4">
         <div className="text-center">
@@ -40,144 +44,62 @@ function Navbar() {
   }
 
 function Test() {
+  const [isOpen, setIsOpen] = useState(false); // State to manage menu visibility
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen); // Toggle menu state
+  };
     return(
-        <section className="hero">
-  <header className="inactive-scrolling">
-    <a href="/" className="logo">
-      <img src="" alt="website logo "/>
-    </a>
-    <nav className="">
-      <button>
-        <img src="/assets/x-icon.082ad8a5.svg" alt="close mobile menu" />
+      <section className="relative hero text-white overflow-hidden  " style={{height:'29rem'}}>
+      <header className="flex justify-between items-center p-4 bg-transparent">
+      <a href="/" className="text-white text-2xl font-bold">
+  EO
+</a>
+<nav className="flex items-center justify-between p-4 bg-transparent">
+      <button className="lg:hidden" onClick={toggleMenu}>
+        {isOpen ? <MdOutlineCancel className="text-white" /> : <RxHamburgerMenu className="text-white" />}
       </button>
-      <ul>
+      <ul className={`flex-col md:flex md:flex-row md:space-x-6 space-y-4 md:space-y-0 ${isOpen ? 'flex' : 'hidden'} lg:flex`}>
         <li>
-          <a href="#stack">Tech Stack</a>
+          <a href="#stack" className="text-white hover:underline">Tech Stack</a>
+        </li>
+        <li>
+          <a href="#projects" className="text-white hover:underline">Projects</a>
+        </li>
+        <li>
+          <a href="#about" className="text-white hover:underline">About Me</a>
+        </li>
+        <li>
+          <a href="#contact" className="text-white hover:underline">Contact Me</a>
+        </li>
+        <li>
+          <a href="https://github.com/ejimnkonye1" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">My Github</a>
         </li>
       </ul>
-      <ul>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="#about">About Me</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="#contact">Contact Me</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="https://github.com/ejimnkonye1" target="_blank">My Github</a>
-        </li>
-      </ul>
-      <button className="menu-icons">
-        <img src="/assets/hamburger-icon.fec3c66a.svg" alt="open mobile menu"/>
-      </button>
     </nav>
-  </header>
-  <div className="hero-inner">
-    <p className="sub-heading">Hey, i'm Ejimnkonye-Onyedika. I am a</p>
-    <div className="hero-heading">
-      <h1>FRONTEND WEB DEVELOPER &amp;</h1>
-      <h1>UI DESIGNER</h1>
-    </div>
-    <p className="hero-intro">Mainly building with ReactJS, I focus on turning ideas into functional and visually stunning realities. Lets collaborate and create something remarkable together!</p>
-    <div className="hero-ctas">
-      <a href="#projects">
-        <button>My Projects</button>
-      </a>
-      <a download="" href="/assets/resume.6054d56e.pdf">
-        <button>Resume</button>
-      </a>
-    </div>
-  </div>
-  <img src="/assets/background-pattern.5461c0e6.png" class="pattern" />
-</section>
-    )
-  }
-
-function About() {
-  return(
-    <div className="bg-gray-100 min-h-screen p-8">
-  <div className="container mx-auto">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      {/* Column 1: Image */}
-      <div className="flex justify-center">
-        <img 
-          src="https://via.placeholder.com/400" 
-          alt="About Me" 
-          className="rounded-lg shadow-lg w-full h-auto object-cover"
-        />
-      </div>
-
-      {/* Column 2: About Me */}
-      <div>
-        <h2 className="text-3xl font-bold mb-4">About Me</h2>
-        <p className="text-gray-700 mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum velit eget erat porttitor, sed tempor justo finibus. Fusce sit amet libero eu magna volutpat viverra. 
+      </header>
+      <div className="hero-inner flex flex-col items-center justify-center text-center p-8 text-white">
+        <p className="sub-heading text-lg">Hey, I'm Ejimnkonye-Onyedika. I am a</p>
+        <div className="hero-heading">
+          <h1 className="text-4xl font-bold">FRONTEND WEB DEVELOPER</h1>
+          
+        </div>
+        <p className="hero-intro mt-4 text-lg max-w-lg">
+          Mainly building with ReactJS, I focus on turning ideas into functional and visually stunning realities. Let's collaborate and create something remarkable together!
         </p>
-        <p className="text-gray-700 mb-4">
-          Vivamus fringilla nisl ac elit pharetra, a sodales justo gravida. Duis sit amet urna in elit tincidunt malesuada. Mauris ultricies ligula non risus fermentum, ut dignissim lectus varius.
-        </p>
-        <p className="text-gray-700">
-          Nam lacinia, libero vitae consequat venenatis, nulla purus sollicitudin augue, at aliquet neque lorem ac ante. In hac habitasse platea dictumst. In euismod ex nec ullamcorper laoreet.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-  )
-}
-  function Projects (){
-    return(
-      <div className="bg-white-100 min-h-screen p-8">
-  <div className="container mx-auto">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      
-      {/* Column 1: Project Image */}
-      <div className="flex justify-center">
-        <img 
-          src="https://via.placeholder.com/500" 
-          alt="Project Image" 
-          className="rounded-lg shadow-lg w-full h-auto object-cover"
-        />
-      </div>
-      
-      {/* Column 2: Project Details */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Project Name</h2>
-        <p className="text-gray-700 mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. This project is a web-based application that allows users to manage their tasks efficiently. It features an intuitive UI and supports real-time collaboration.
-        </p>
-        <h3 className="font-semibold mb-2">Tech Stack:</h3>
-        <ul className="list-disc pl-5 text-gray-700">
-          <li>React</li>
-          <li>Node.js</li>
-          <li>MongoDB</li>
-          <li>Tailwind CSS</li>
-        </ul>
-        
-        <div className="flex space-x-4 mt-6">
-          <a href="https://your-live-link.com" target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-            View Live Project
+        <div className="hero-ctas mt-6 space-x-4">
+          <a href="#projects">
+            <button className="bg-white text-blue-600 px-4 py-2 rounded-lg">My Projects</button>
           </a>
-          <a href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900">
-            View Source Code
+          <a download href="/assets/resume.6054d56e.pdf">
+            <button className="bg-white text-blue-600 px-4 py-2 rounded-lg">Resume</button>
           </a>
         </div>
       </div>
-
-    </div>
-  </div>
-</div>
-
+      <img src={img} alt="Background pattern" className="pattern absolute bottom-0 top-0 left-0  h-auto object-cover opacity-20" style={{maxWidth:'100%', width:'100%'}} />
+    </section>
+    
     )
   }
 
-  export {HeroSection, Navbar, Test, About, Projects, };
+  export {HeroSection, Navbar, Test, };

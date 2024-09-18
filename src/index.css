@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.hero{
+   
+    background-image: linear-gradient(to bottom right, #457AD4 5%, #254375);
+
+}
+.pattern{
+    max-width: 100%;
+    position: relative;
+    bottom: 10px;
+    /* opacity: 0; */
+    opacity: 90;
+    animation: show-pattern 1s cubic-bezier(.68,-0.55,.27,1.55) forwards calc(var(--delay) * 6 );
+    -webkit-animation: show-pattern 1s cubic-bezier(.68,-0.55,.27,1.55) forwards calc(var(--delay) * 6 );
+}
+.hero .hero-ctas{
+    max-width: fit-content;
+    margin: auto;
+    position: relative;
+    z-index: 4;
+    margin-top: 20px;
+}
+
+.hero-ctas a button{
+    background-color: #5494ff;
+    border: 1px solid black;
+    border-radius: .2rem;
+    padding: 0.4rem 0.54rem;
+    color:white;
+    box-shadow: 3px 3px 0rem 0rem black;
+    font-size: 1.1rem;
+    margin: 0 1rem 0 0;
+    transition: all .1s ease-in;
+  
+    
+}
+
+.hero-ctas a:last-of-type button{
+    background-color: transparent;
+    color: white;
+    border: 2px solid #5494ff;
+    padding: 0.4rem 0.6rem;
+    font-size: 1.1rem;
+    box-shadow: none;
+    animation-delay: calc(var(--delay) * 5.5 );
+}
+
+.hero-ctas button a{
+    color: inherit;
+    text-decoration: none;
+}
