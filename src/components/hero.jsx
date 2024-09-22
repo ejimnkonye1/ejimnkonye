@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import img from '../assets/background.png'
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -12,7 +13,7 @@ function Test() {
     setIsOpen(!isOpen); // Toggle menu state
   };
     return(
-      <section className="relative hero text-white overflow-hidden  " style={{height:'29rem'}}>
+      <section className="relative hero text-white overflow-hidden  " style={{height:'29rem', width:'100%'}}>
         <nav className="">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">

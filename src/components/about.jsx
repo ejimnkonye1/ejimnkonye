@@ -5,9 +5,9 @@ export const  About = () => {
   
     return(
       <section className="" style={style.top}>
-   <div className=" min-h-screen p-8">
-    <div className="container mx-auto p-8">
-    <h2 className="text-3xl font-bold mb-4">About Me</h2>
+   <div className=" min-h-screen ">
+   <div className="container mx-auto p-4 md:p-8 lg:p-12">
+    <h3 className="text-2xl font-bold mb-4">About Me</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         
         <div className="flex justify-center">

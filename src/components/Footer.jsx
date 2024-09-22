@@ -4,11 +4,11 @@ import { TbMailFilled } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
 export const  Footer = () => {
     return(
-      <footer  className="bg-black h-full p-4" style={{fontFamily:' clashGrotesk'}}>
+      <footer  className="bg-black h-full " style={{fontFamily:' clashGrotesk'}}>
     
-    <div className="container mx-auto p-4">
-    <h5 className="uppercase text-lg mb-2 text-white font-semibold  ml-10" style={{fontSize:'1.5rem',}}>CONTACT ME</h5>
-    <ul className="space-y-4 p-8">
+    <div className="container mx-auto p-4 md:p-8 lg:p-12">
+    <h5 className="uppercase text-lg mb-2 text-white font-semibold  " style={{fontSize:'1.5rem',}}>CONTACT ME</h5>
+    <ul className="space-y-4 p-2 md:p-2 lg:p-2">
   <li className="flex items-center space-x-4">
     <div className="w-14 h-14 bg-green-700 rounded-full flex items-center justify-center">
     

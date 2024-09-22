@@ -18,7 +18,7 @@ export const Projects =() =>{
             backgroundColor: '#457AD4', 
             border: '1px solid black',
             borderRadius: '0.3rem',
-            padding: '0.1rem 1em',
+            padding: '0.4rem 1em',
             color: '#fff',
             boxShadow: '3px 3px #000',
             fontSize: '1.1rem',
@@ -96,8 +96,13 @@ export const Projects =() =>{
     }
     
     return(
-      <div className="bg-white-100 min-h-screen p-8">
-  <div className="container mx-auto p-8">
+      <div className="bg-white-100 min-h-screen ">
+        
+  <div className="container mx-auto p-4 md:p-8 lg:p-12">
+  <div className="flex items-center mb-4 ">
+      <h3 className="text-2xl font-semibold mr-4">Projects</h3>
+      <div className="flex-1"></div>
+    </div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
       
       <div>
@@ -115,7 +120,7 @@ export const Projects =() =>{
 
   <span className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{height:'30px' , borderRadius:'40px'}}>Node.js</span>
   <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{height:'30px', borderRadius:'40px'}}>MongoDB</li>
-  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{height:'30px', borderRadius:'40px'}}>Tailwind CSS</li>
+  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{height:'30px', borderRadius:'40px'}}>Tailwind</li>
 </ul>
 
         
@@ -169,17 +174,17 @@ export const Projects =() =>{
 
   <span className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{height:'30px' , borderRadius:'40px'}}>Node.js</span>
   <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{height:'30px', borderRadius:'40px'}}>MongoDB</li>
-  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{height:'30px', borderRadius:'40px'}}>Tailwind CSS</li>
+  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{height:'30px', borderRadius:'40px'}}>Tailwind</li>
 </ul>
 
         
         <div className="flex space-x-4 mt-6">
           <a style={style.live} href="https://your-live-link.com" target="_blank" rel="noopener noreferrer" className=" text-white ">
-            Live Site <HiMiniArrowTopRightOnSquare />
+            Live Site <HiMiniArrowTopRightOnSquare className="ml-2 mt-1" />
 
           </a>
           <a style={style.source} href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" className=" text-white ">
-            Source Code <FaGithub />
+            Source Code <FaGithub className="ml-2 mt-1" />
           </a>
         </div>
       </div>
