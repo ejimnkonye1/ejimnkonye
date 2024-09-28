@@ -1,6 +1,6 @@
 import { About } from "./components/about";
 import { Footer } from "./components/Footer";
-import {   Test } from "./components/hero";
+import {   Hero } from "./components/hero";
 import { Projects } from "./components/project";
 import { Stack } from "./components/stack";
 import { useState, useEffect } from "react";
@@ -37,7 +37,7 @@ function App() {
 <Layout>
 
 
-  <Test />
+  <Hero />
  
   <Stack />
   <Projects />

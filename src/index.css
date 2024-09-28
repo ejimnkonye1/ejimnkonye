@@ -135,3 +135,147 @@
       box-shadow: .2em -.2em 0 0 currentcolor;
     }
   }
+
+
+  /*navbar*/
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    padding-left: 30px;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-menu {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .toggle-menu .menu-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .toggle-menu .menu-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+  }
+  
+  .toggle-menu .menu-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(90deg);
+  }
+  
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    padding: 30px;
+  }
+  
+  .nav-link:hover {
+    color: #ccc;
+  }
+  .github{
+    border: 2px solid blue;
+    padding: 12px;
+  }
+  /* Media query for mobile devices */
+  @media only screen and (max-width: 768px) {
+    .toggle-menu {
+      display: block;
+    }
+  
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 1rem;
+    }
+  
+    .nav-list li {
+      margin-bottom: 1rem;
+    }
+  
+    .nav-list li:last-child {
+      margin-bottom: 0;
+    }
+  
+    .toggle-menu:checked + .nav-list {
+      display: block;
+    }
+    .logo{
+      padding: none;
+      padding-left: 0;
+    }
+  }
+
+
+  /*Footer */
+   /* Media query for mobile devices */
+   .ct-me{
+    font-size: 1.4rem;
+   }
+   @media only screen and (max-width: 768px) {
+    .foot-link{
+      font-size: 1.2rem;
+    }
+    .ct-me{
+      font-size: 1.2rem;
+    }
+    .cir-img{
+      width: 40px;
+      height: 40px;
+    }
+    .eji{
+      
+      padding: 20px;
+    }
+   }
+

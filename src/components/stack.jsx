@@ -5,13 +5,12 @@ import img4 from '../images/tailwindcss.svg'
 import img5 from '../images/react.svg'
 import img6 from '../images/py.jpeg'
 import 'aos/dist/aos.css';
-import Aos from 'aos'
-import { useEffect } from 'react'
+
 export const Stack = () => {
 
 
     return(
-<div className="bg-gray-100 h-auto p-4 md:p-8 lg:p-12" data-aos="fade-up">
+<div className="bg-gray-100 h-auto p-4 md:p-5 lg:p-3" >
   <div className="container mx-auto">
     <div className="flex items-center mb-4 md:ml-8">
       <h2 className="text-1xl font-semibold mr-4">TECH STACK</h2>

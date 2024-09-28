@@ -70,7 +70,7 @@ export const  About = () => {
     borderWidth: '1px',
     borderStyle: 'solid',
     borderColor: 'black',
-    padding: '0.6rem 0.4rem',
+    padding: '0.3rem 1em',
     borderRadius: '0.3rem',
   },
 }
