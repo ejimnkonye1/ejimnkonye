@@ -6,6 +6,7 @@ import { MdOutlineCancel } from "react-icons/md";
 import { useState, useEffect } from 'react';
 import 'aos/dist/aos.css';
 import Aos from 'aos'
+import res from '../assets/Resume-Onyedika.pdf'
 
 
 function Hero() {
@@ -58,7 +59,7 @@ function Hero() {
     <a href="#projects">
       <button className="bg-white text-blue-600 px-4 py-2 rounded-lg" data-aos="flip-right" data-aos-delay="1000">My Projects</button>
     </a>
-    <a download href="/assets/resume.6054d56e.pdf">
+    <a download href={res}>
       <button className="bg-white text-blue-600 px-4 py-2 rounded-lg" data-aos-delay="1000">Resume</button>
     </a>
   </div>
