@@ -12,31 +12,39 @@ function Hero() {
   useEffect(() => {
     Aos.init()
      },[])
-  const [isOpen, setIsOpen] = useState(false); // State to manage menu visibility
+     const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen); // Toggle menu state
-  };
+     const toggleMenu = () => {
+      setMenuOpen(prevState => !prevState);
+       console.log('Menu is open:', menuOpen);
+     };
     return(
       <section className="relative hero text-white overflow-hidden  " style={{height:'29rem', width:'100%'}} data-aos="fade-up"  data-aos-delay="0"  data-aos-duration="2000">
      
  
-<header className="navbar">
-  <a href="/" className="logo">EO</a>
-  <nav className="nav">
-    <button className="toggle-menu" onClick={toggleMenu}>
-  
-      <RxHamburgerMenu className="text-white menu-icon" />
-    </button>
-    <ul className="nav-list">
-      <li><a href="#stack" className="nav-link">Tech Stack</a></li>
-      <li><a href="#projects" className="nav-link">Projects</a></li>
-      <li><a href="#about" className="nav-link">About Me</a></li>
-      <li><a href="#contact" className="nav-link">Contact Me</a></li>
-      <li><a href="https://github.com/ejimnkonye1" target="_blank" rel="noopener noreferrer" className="nav-link github">My Github</a></li>
-    </ul>
-  </nav>
-</header>
+     <header className="navbar">
+      <a href="/" className="logo">EO</a>
+      <nav className="nav">
+        <button className="toggle-menu" onClick={toggleMenu}>
+          {menuOpen ? <MdOutlineCancel className="text-white menu-icon" style={{zIndex:'20'}}  /> :
+
+<RxHamburgerMenu className="text-white menu-icon" />
+        }
+        
+        </button>
+        <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
+          <li><a href="#stack" className="nav-link">Tech Stack</a></li>
+          <li><a href="#projects" className="nav-link">Projects</a></li>
+          <li><a href="#about" className="nav-link">About Me</a></li>
+          <li><a href="#contact" className="nav-link">Contact Me</a></li>
+          <li>
+            <a href="https://github.com/ejimnkonye1" target="_blank" rel="noopener noreferrer" className="nav-link github">
+              My Github
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
    
       <div className="hero-inner flex flex-col items-center justify-center text-center p-8 text-white">
   <p className="sub-heading text-lg" data-aos="fade-up" data-aos-delay="400"  data-aos-duration="1000">Hey, I'm Ejimnkonye-Onyedika. I am a</p>

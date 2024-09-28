@@ -4,7 +4,7 @@ import img1 from '../images/image (1).png'
 export const  About = () => {
   
     return(
-      <section className="" style={style.top}>
+      <section className="" style={style.top} id='about'>
    <div className=" min-h-screen ">
    <div className="container mx-auto p-4 md:p-8 lg:p-12">
     <h3 className="text-2xl font-bold mb-4">About Me</h3>

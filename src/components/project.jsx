@@ -96,7 +96,7 @@ export const Projects =() =>{
     }
     
     return(
-      <div className="bg-white-100 min-h-screen ">
+      <div className="bg-white-100 min-h-screen " id="projects">
         
   <div className="container mx-auto p-4 md:p-8 lg:p-12">
   <div className="flex items-center mb-4 ">

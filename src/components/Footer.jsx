@@ -4,7 +4,7 @@ import { TbMailFilled } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
 export const  Footer = () => {
     return(
-      <footer  className="bg-black h-full " style={{fontFamily:' clashGrotesk'}}>
+      <footer  className="bg-black h-full " style={{fontFamily:' clashGrotesk'}} id="contact">
     
     <div className="container mx-auto p-4 md:p-8 lg:p-12">
     <h5 className="uppercase text-lg mb-2 text-white font-semibold  ct-me" >CONTACT ME</h5>
