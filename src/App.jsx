@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { About } from "./components/about";
 import { Footer } from "./components/Footer";
 import {   Hero } from "./components/hero";
