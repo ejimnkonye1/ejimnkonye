@@ -16,7 +16,7 @@ export const  Footer = () => {
     </div>
     <div className="flex items-center space-x-2">
       <span className="foot-link underline cursor-pointer text-white text-2xl font-clashGrotesk  font-semibold">
-        Send me an email
+       <a  href="mailto:ejimnkonyeonyedika@gmail.com" target="_blank"> Send me an email</a>
       </span>
       <MdArrowOutward className="text-white text-2xl" />
     </div>
@@ -28,7 +28,10 @@ export const  Footer = () => {
     </div>
     <div className="flex items-center space-x-2">
       <span className="foot-link underline cursor-pointer text-white text-2xl font-clashGrotesk font-semibold " >
+       
+        <a  href="https://github.com/ejimnkonye1" target="_blank">
         Checkout my github
+        </a>
       </span>
       <MdArrowOutward className="text-white text-2xl" />
     </div>
@@ -40,7 +43,10 @@ export const  Footer = () => {
     </div>
     <div className="flex items-center space-x-2">
       <span className="foot-link underline cursor-pointer text-white text-2xl font-clashGrotesk font-semibold">
+      
+        <a href="https://www.linkedin.com/in/ejimnkonye-onyedika/" target="_blank">
         Message me on linkedin
+        </a>
       </span>
       <MdArrowOutward className="text-white text-2xl" />
     </div>
