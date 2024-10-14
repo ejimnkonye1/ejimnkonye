@@ -7,8 +7,8 @@ export const  About = () => {
       <section className="" style={style.top} id='about'>
    <div className=" min-h-screen ">
    <div className="container mx-auto p-4 md:p-8 lg:p-12">
-    <h3 className="text-2xl font-bold mb-4">About Me</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <h3 className="text-lg font-black font-serif font-bold mb-4">ABOUT ME</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-[18px] md:p-[2px]">
         
         <div className="flex justify-center">
           <img 
@@ -18,7 +18,6 @@ export const  About = () => {
           />
         </div>
   
-        {/* Column 2: About Me */}
         <div>
        
           <p className="text-gray-700 mb-4" style={style.about}>
@@ -33,8 +32,11 @@ export const  About = () => {
           Beyond web development, I enjoy watching movies, playing video games, and listening to music
           </p>
           <div className="mt-2">
-            <button className=" bg-blue-600  text-white " style={style.aboutBtn}>
-                send me a message
+            <button className="message bg-blue-600 font-semibold text-white " style={style.aboutBtn}>
+                     <a  href="mailto:ejimnkonyeonyedika@gmail.com" target="_blank">
+                     Send me a message
+                     </a>
+
             </button>
           </div>
         </div>
@@ -63,14 +65,15 @@ export const  About = () => {
     margin: '0 0 2rem',
   },
   aboutBtn: {
-    backgroundColor: '#457AD4;',
-    color: 'rgb(255, 255, 255)',
-    boxShadow: 'rgb(0, 0, 0) 4px 3px',
-    fontSize: '1.1rem',
-    borderWidth: '1px',
-    borderStyle: 'solid',
-    borderColor: 'black',
-    padding: '0.3rem 1em',
+    backgroundColor: '#457AD4', 
+    border: '1px solid black',
     borderRadius: '0.3rem',
+    padding: '0.4rem 1em',
+    color: '#fff',
+    boxShadow: '3px 3px #000',
+    fontSize: '1.1rem',
+    display: 'inline-flex',
+    alignItems: 'center',
+    margin: '0 1rem 0rem 0',
   },
 }

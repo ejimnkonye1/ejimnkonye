@@ -13,11 +13,12 @@ export const Stack = () => {
 <div className="bg-gray-100 h-auto p-4 md:p-5 lg:p-3" id='stack' >
   <div className="container mx-auto">
     <div className="flex items-center mb-4 md:ml-8">
-      <h2 className="text-1xl font-semibold mr-4">TECH STACK</h2>
+      <h6 className="text-lg font-black tracking-tight font-serif">TECH STACK</h6>
+      
       <div className="flex-1"></div>
     </div>
     
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8 lg:gap-12">
+    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8 lg:gap-12">
   {/* Column 1 */}
   <div className="flex flex-col items-center p-4">
     <img 

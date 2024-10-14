@@ -7,7 +7,7 @@ export const  Footer = () => {
       <footer  className="bg-black h-full " style={{fontFamily:' clashGrotesk'}} id="contact">
     
     <div className="container mx-auto p-4 md:p-8 lg:p-12">
-    <h5 className="uppercase text-lg mb-2 text-white font-semibold  ct-me" >CONTACT ME</h5>
+    <h5 className="uppercase text-lg mb-2 text-white ffont-black font-serif ct-me" >CONTACT ME</h5>
     <ul className="space-y-4 p-2 md:p-2 lg:p-2 text-lg md:text-2xl sm:text-base">
     <li className="flex items-center space-x-4 text-lg md:text-2xl sm:text-base">
     <div className="cir-img w-14 h-14 bg-green-700 rounded-full flex items-center justify-center">

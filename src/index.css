@@ -24,24 +24,33 @@
 }
 
 .hero-ctas a button{
-    background-color: #5494ff;
+    background-color: #457AD4;
     border: 1px solid black;
-    border-radius: .2rem;
-    padding: 0.4rem 0.54rem;
+    border-radius: .3rem;
+    padding: 0.4rem 1em;
     color:white;
     box-shadow: 3px 3px 0rem 0rem black;
     font-size: 1.1rem;
     margin: 0 1rem 0 0;
-    transition: all .1s ease-in;
+    transition: all .3s ease-in;
+    
   
     
 }
 
+.hero-ctas .projects:hover, .message:hover, .live-site:hover {
+  transform: translate(-5px, -2px) scale(1.05);
+  transition: all 0.2s ease-in-out;
+
+
+}
+
+
 .hero-ctas a:last-of-type button{
     background-color: transparent;
     color: white;
-    border: 2px solid #5494ff;
-    padding: 0.4rem 0.6rem;
+    border: 1px solid #5494ff;
+    padding: 0.4rem 1em;
     font-size: 1.1rem;
     box-shadow: none;
     animation-delay: calc(var(--delay) * 5.5 );
@@ -149,10 +158,17 @@
   
   .logo {
     font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
+    font-weight:900;
+    /* color: #fff; */
+    color: #254375;
     text-decoration: none;
     padding-left: 30px;
+    opacity: 1;
+    letter-spacing: -0.02rem;
+    text-shadow: 
+    -1px -1px 0px #3c457a /* Inner shadow, covering the inside of O and E */
+    1px 1px 2px rgba(0, 0, 0, 0.5); 
+    
   }
   
   .nav {
@@ -221,10 +237,13 @@
   }
   
   .github {
-    border: 2px solid #043b9a;
-    padding: 12px;
+    border: 2px solid #5494FF;;
+    padding: 8px;
   }
-  
+  .github:hover{
+    background-color: #5494FF;
+    color: #fff;
+  }
   /* Media query for mobile devices */
   @media only screen and (max-width: 768px) {
     .toggle-menu {
