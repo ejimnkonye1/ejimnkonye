@@ -15,6 +15,7 @@
     animation: show-pattern 1s cubic-bezier(.68,-0.55,.27,1.55) forwards calc(var(--delay) * 6 );
     -webkit-animation: show-pattern 1s cubic-bezier(.68,-0.55,.27,1.55) forwards calc(var(--delay) * 6 );
 }
+
 .hero .hero-ctas{
     max-width: fit-content;
     margin: auto;
@@ -32,7 +33,7 @@
     box-shadow: 3px 3px 0rem 0rem black;
     font-size: 1.1rem;
     margin: 0 1rem 0 0;
-    transition: all .3s ease-in;
+    /* transition: all .3s ease-in; */
     
   
     
@@ -62,7 +63,17 @@
 }
 
 
+@media (max-width: 768px) {
+  .hero-ctas {
+      flex-direction: column; 
+      align-items: center; 
+  }
 
+  .hero-ctas a button {
+      margin: 0.5rem 0; 
+      
+  }
+}
 
 .loader {
     transform: rotateZ(45deg);
@@ -166,7 +177,7 @@
     opacity: 1;
     letter-spacing: -0.02rem;
     text-shadow: 
-    -1px -1px 0px #3c457a /* Inner shadow, covering the inside of O and E */
+    -1px -1px 0px #3c457a 
     1px 1px 2px rgba(0, 0, 0, 0.5); 
     
   }
@@ -305,7 +316,7 @@
    }
    @media only screen and (max-width: 768px) {
     .foot-link{
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     .ct-me{
       font-size: 1.2rem;

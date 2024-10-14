@@ -42,7 +42,7 @@ export const  Footer = () => {
       <FaLinkedin className="text-white w-6 h-6" />
     </div>
     <div className="flex items-center space-x-2">
-      <span className="foot-link underline cursor-pointer text-white text-2xl font-clashGrotesk font-semibold">
+      <span className="foot-link underline cursor-pointer text-white md:text-2xl font-clashGrotesk font-semibold">
       
         <a href="https://www.linkedin.com/in/ejimnkonye-onyedika/" target="_blank">
         Message me on linkedin

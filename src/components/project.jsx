@@ -110,15 +110,26 @@ export const Projects =() =>{
     <p className="text-gray-700 mb-4" style={style.descriptionp}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. This project is a web-based application that allows users to manage their tasks efficiently. It features an intuitive UI and supports real-time collaboration.
     </p>
-    <ul className="flex space-x-2 p-2">
-      <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{ height: '30px', borderRadius: '40px' }}>Reactjs</li>
-      <span className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{ height: '30px', borderRadius: '40px' }}>Node.js</span>
-      <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{ height: '30px', borderRadius: '40px' }}>MongoDB</li>
-      <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{ height: '30px', borderRadius: '40px' }}>Tailwind</li>
-    </ul>
+    <ul className="flex md:p-2 p-1 space-x-1 md:space-x-2">
+  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 text-gray-700 border border-gray-500 rounded-lg p-1">
+    Reactjs
+  </li>
+  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 text-gray-700 border border-gray-500 rounded-lg p-1">
+    Node.js
+  </li>
+  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 text-gray-700 border border-gray-500 rounded-lg p-1">
+    MongoDB
+  </li>
+  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 text-gray-700 border border-gray-500 rounded-lg p-1">
+    Tailwind
+  </li>
+</ul>
+
+
+
     <div className="flex space-x-4 mt-6">
-      <a style={style.live} href="https://your-live-link.com" target="_blank" rel="noopener noreferrer" className="text-white live-site">Live Site <HiMiniArrowTopRightOnSquare /></a>
-      <a style={style.source} href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" className="text-white live-site">Source Code <FaGithub /></a>
+      <a style={style.live} href="https://your-live-link.com" target="_blank" rel="noopener noreferrer" className="text-white live-site text-nowrap">Live Site <HiMiniArrowTopRightOnSquare /></a>
+      <a style={style.source} href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" className="text-white live-site text-nowrap">Source Code <FaGithub /></a>
     </div>
   </div>
   <div className="flex justify-center order-1 md:order-2 ">
@@ -139,15 +150,26 @@ export const Projects =() =>{
     <p className="text-gray-700 mb-4" style={style.descriptionp}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. This project is a web-based application that allows users to manage their tasks efficiently. It features an intuitive UI and supports real-time collaboration.
     </p>
-    <ul className="flex space-x-2 p-2">
-      <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{ height: '30px', borderRadius: '40px' }}>Reactjs</li>
-      <span className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{ height: '30px', borderRadius: '40px' }}>Node.js</span>
-      <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{ height: '30px', borderRadius: '40px' }}>MongoDB</li>
-      <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 px-3 py-1 rounded-md m-0 mr-2 mb-2 text-gray-700" style={{ height: '30px', borderRadius: '40px' }}>Tailwind</li>
-    </ul>
+    <ul className="flex md:p-2 p-1 space-x-1 md:space-x-2">
+  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 text-gray-700 border border-gray-500 rounded-lg p-1">
+    Reactjs
+  </li>
+  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 text-gray-700 border border-gray-500 rounded-lg p-1">
+    Node.js
+  </li>
+  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 text-gray-700 border border-gray-500 rounded-lg p-1">
+    MongoDB
+  </li>
+  <li className="bg-gray-300 font-[gotham] text-[0.95rem] opacity-80 text-gray-700 border border-gray-500 rounded-lg p-1">
+    Tailwind
+  </li>
+</ul>
+
+
+
     <div className="flex space-x-4 mt-6">
-      <a style={style.live} href="https://your-live-link.com" target="_blank" rel="noopener noreferrer" className="text-white live-site">Live Site <HiMiniArrowTopRightOnSquare /></a>
-      <a style={style.source} href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" className="text-white live-site">Source Code <FaGithub /></a>
+      <a style={style.live} href="https://your-live-link.com" target="_blank" rel="noopener noreferrer" className="text-white live-site text-nowrap">Live Site <HiMiniArrowTopRightOnSquare /></a>
+      <a style={style.source} href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" className="text-white live-site text-nowrap">Source Code <FaGithub /></a>
     </div>
   </div>
   <div className="flex justify-center order-1 md:order-2 ">
