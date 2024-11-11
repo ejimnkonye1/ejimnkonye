@@ -4,7 +4,7 @@ import img1 from '../images/image (1).png'
 export const  About = () => {
   
     return(
-      <section className="" style={style.top} id='about'>
+      <section className="border-t-2 border-black my-4 py-4"  id='about'>
    <div className=" min-h-screen ">
    <div className="container mx-auto p-4 md:p-8 lg:p-12">
     <h3 className="text-lg font-black font-serif font-bold mb-4">ABOUT ME</h3>
@@ -20,7 +20,7 @@ export const  About = () => {
   
         <div>
        
-          <p className="text-gray-700 mb-4" style={style.about}>
+          <p className="text-gray-700 mb-4 text-base font-gotham tracking-tight leading-6 ">
           Hi there! I'm Ejimnkonye Onyedika, a web developer from Nigeria with 2 years of experience. Although I've been involved in web development for a while,
           my passion truly blossomed when I decided to take it seriously.
           Coding, and playing football manager  fill my days with excitement
@@ -28,11 +28,11 @@ export const  About = () => {
           <p className="text-gray-700 mb-4">
       
           </p>
-          <p className="text-gray-700" style={style.about}>
+          <p className="text-gray-700 text-base font-gotham tracking-tight leading-6 mb-8" >
           Beyond web development, I enjoy watching movies, playing video games, and listening to music
           </p>
           <div className="mt-2">
-            <button className="message bg-blue-600 font-semibold text-white " style={style.aboutBtn}>
+            <button className="message  font-semibold text-white bg-[#457AD4] border border-black rounded-md py-3 px-4 text-white shadow-md text-base inline-flex items-center mr-4" >
                      <a  href="mailto:ejimnkonyeonyedika@gmail.com" target="_blank">
                      Send me a message
                      </a>
@@ -48,32 +48,3 @@ export const  About = () => {
   
     )
   }
-  const style = {
-    top:{
-    
-        borderTop: '2px solid black',
-        margin: '1rem 0',
-        padding: '1rem 0',
-   
-  },
-  about: {
-    fontSize: '1.2rem',  // Fixed typo from font-siz to fontSize
-    fontFamily: 'gotham',
-    letterSpacing: '-0.5px',
-    lineHeight: '1.4',
-
-    margin: '0 0 2rem',
-  },
-  aboutBtn: {
-    backgroundColor: '#457AD4', 
-    border: '1px solid black',
-    borderRadius: '0.3rem',
-    padding: '0.4rem 1em',
-    color: '#fff',
-    boxShadow: '3px 3px #000',
-    fontSize: '1.1rem',
-    display: 'inline-flex',
-    alignItems: 'center',
-    margin: '0 1rem 0rem 0',
-  },
-}

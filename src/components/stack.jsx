@@ -19,7 +19,7 @@ export const Stack = () => {
     </div>
     
     <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8 lg:gap-12">
-  {/* Column 1 */}
+  
   <div className="flex flex-col items-center p-4">
     <img 
       src={img1} 
@@ -29,7 +29,7 @@ export const Stack = () => {
     <p className="text-gray-700 font-semibold">Html</p>
   </div>
   
-  {/* Column 2 */}
+  
   <div className="flex flex-col items-center p-4">
     <img 
       src={img2}
@@ -39,7 +39,7 @@ export const Stack = () => {
     <p className="text-gray-700 font-semibold">Css</p>
   </div>
   
-  {/* Column 3 */}
+ 
   <div className="flex flex-col items-center p-4">
     <img 
       src={img3}
@@ -49,7 +49,7 @@ export const Stack = () => {
     <p className="text-gray-700 font-semibold">Javascript</p>
   </div>
   
-  {/* Column 4 */}
+  
   <div className="flex flex-col items-center p-4">
     <img 
       src={img4} 

@@ -7,12 +7,11 @@ import { Stack } from "./components/stack";
 import { useState, useEffect } from "react";
 
 const Loader = () => (
-  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-    <div className="text-center">
-    <div className="loader" role="status">
-</div>
-    </div>
-  </div>
+  <div className="flex items-center justify-center h-screen">
+            <div className="text-center">
+                <div className="loader" role="status"></div>
+            </div>
+        </div>
   
   
   );

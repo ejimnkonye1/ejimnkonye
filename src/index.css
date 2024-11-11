@@ -1,43 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.hero{
-   z-index: 1 !important;
-    background-image: linear-gradient(to bottom right, #457AD4 5%, #254375);
 
-}
-.pattern{
-    max-width: 100%;
-    position: relative;
-    bottom: 10px;
-    /* opacity: 0; */
-    opacity: 90;
-    animation: show-pattern 1s cubic-bezier(.68,-0.55,.27,1.55) forwards calc(var(--delay) * 6 );
-    -webkit-animation: show-pattern 1s cubic-bezier(.68,-0.55,.27,1.55) forwards calc(var(--delay) * 6 );
-}
 
-.hero .hero-ctas{
-    max-width: fit-content;
-    margin: auto;
-    position: relative;
-    z-index: 4;
-    margin-top: 20px;
-}
 
-.hero-ctas a button{
-    background-color: #457AD4;
-    border: 1px solid black;
-    border-radius: .3rem;
-    padding: 0.4rem 1em;
-    color:white;
-    box-shadow: 3px 3px 0rem 0rem black;
-    font-size: 1.1rem;
-    margin: 0 1rem 0 0;
-    /* transition: all .3s ease-in; */
-    
-  
-    
-}
 
 .hero-ctas .projects:hover, .message:hover, .live-site:hover {
   transform: translate(-5px, -2px) scale(1.05);
@@ -47,33 +13,7 @@
 }
 
 
-.hero-ctas a:last-of-type button{
-    background-color: transparent;
-    color: white;
-    border: 1px solid #5494ff;
-    padding: 0.4rem 1em;
-    font-size: 1.1rem;
-    box-shadow: none;
-    animation-delay: calc(var(--delay) * 5.5 );
-}
 
-.hero-ctas button a{
-    color: inherit;
-    text-decoration: none;
-}
-
-
-@media (max-width: 768px) {
-  .hero-ctas {
-      flex-direction: column; 
-      align-items: center; 
-  }
-
-  .hero-ctas a button {
-      margin: 0.5rem 0; 
-      
-  }
-}
 
 .loader {
     transform: rotateZ(45deg);
@@ -110,23 +50,7 @@
       animation-delay: .4s;
     }
 
-  @keyframes rotate {
-    0% {
-      transform: translate(-50%, -50%) rotateZ(0deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotateZ(360deg);
-    }
-  }
 
-  @keyframes rotateccw {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotate(-360deg);
-    }
-  }
 
   @keyframes spin {
     0%,
@@ -157,106 +81,9 @@
   }
 
 
-  /*navbar*/
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: transparent;
-    z-index: 10;
-  }
   
-  .logo {
-    font-size: 2rem;
-    font-weight:900;
-    /* color: #fff; */
-    color: #254375;
-    text-decoration: none;
-    padding-left: 30px;
-    opacity: 1;
-    letter-spacing: -0.02rem;
-    text-shadow: 
-    -1px -1px 0px #3c457a 
-    1px 1px 2px rgba(0, 0, 0, 0.5); 
-    
-  }
-  
-  .nav {
-    display: flex;
-    align-items: center;
-    z-index: 10;
-  }
-  
-  .toggle-menu {
-    display: none;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .toggle-menu .menu-icon {
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    position: relative;
-  }
-  
-  .toggle-menu .menu-icon::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 2px;
-    background-color: #fff;
-  }
-  
-  .toggle-menu .menu-icon::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 2px;
-    background-color: #fff;
-    transform: rotate(90deg);
-  }
-  
-  .nav-list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    list-style: none;
-    margin: 10px;
-    padding: 10px;
-    z-index: 2;
-  }
-  
-  .nav-link {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.2s ease;
-    padding: 30px;
-  }
-  
-  .nav-link:hover {
-    color: #ccc;
-  }
-  
-  .github {
-    border: 2px solid #5494FF;;
-    padding: 8px;
-  }
-  .github:hover{
-    background-color: #5494FF;
-    color: #fff;
-  }
   /* Media query for mobile devices */
-  @media only screen and (max-width: 768px) {
+  /* @media only screen and (max-width: 768px) {
     .toggle-menu {
       display: block;
     }
@@ -271,7 +98,7 @@
       flex-direction: column;
       align-items: center;
   
-      /* Transition using max-height */
+    
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
@@ -290,7 +117,7 @@
       padding-left: 0;
     }
   
-    /* When the menu is open, reveal it */
+   
   .nav-list.open {
   display: flex;
   flex-direction: column;
@@ -305,29 +132,8 @@
 
   z-index: 3 !important;
 }
-  }
+  } */
   
 
 
-  /*Footer */
-   /* Media query for mobile devices */
-   .ct-me{
-    font-size: 1.4rem;
-   }
-   @media only screen and (max-width: 768px) {
-    .foot-link{
-      font-size: 1.1rem;
-    }
-    .ct-me{
-      font-size: 1.2rem;
-    }
-    .cir-img{
-      width: 40px;
-      height: 40px;
-    }
-    .eji{
-      
-      padding: 20px;
-    }
-   }
-
+  

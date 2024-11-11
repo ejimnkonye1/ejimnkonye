@@ -9,6 +9,7 @@ export default {
       extend: {
         fontFamily: {
           sans: ['gotham', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', 'sans-serif'],
+          clash: ['clashGrotesk']
         },
       },
     },
