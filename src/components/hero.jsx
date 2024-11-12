@@ -24,51 +24,52 @@ function Hero() {
      
  
      <header className="flex justify-between items-center p-4 bg-transparent z-10">
-            <a href="/" className="text-2xl font-extrabold text-[#254375] pl-8 tracking-tight">
-                EO
-            </a>
-            <nav className="flex items-center z-10">
-               
-                <button 
-                    className="block md:hidden bg-transparent border-none cursor-pointer" 
-                    onClick={toggleMenu}
+    <a href="/" className="text-2xl font-extrabold text-[#254375] pl-8 tracking-tight">
+        EO
+    </a>
+    <nav className="flex items-center z-10">
+        <button 
+            className="block md:hidden bg-transparent border-none cursor-pointer z-30" 
+            onClick={toggleMenu}
+        >
+            {menuOpen ? (
+                <MdOutlineCancel className="text-white text-2xl" />
+            ) : (
+                <RxHamburgerMenu className="text-white text-2xl" />
+            )}
+        </button>
+
+        <ul 
+            className={`flex-col md:flex-row items-center m-2 p-2 transition-all duration-300 
+                ${menuOpen ? 'flex absolute top-0 left-0 w-full bg-[#457AD4] p-4 flex-col items-center z-20' : 'hidden md:flex'} 
+                md:static md:bg-transparent`}
+        >
+            <li className={`${menuOpen? 'mb-2':''}`}>
+                <a href="#stack" className="text-white text-base font-semibold px-8 py-2 transition-colors duration-200 hover:text-gray-300">Tech Stack</a>
+            </li>
+            <li className={`${menuOpen? 'mb-2':''}`}>
+                <a href="#projects" className="text-white text-base font-semibold px-8 py-2 transition-colors duration-200 hover:text-gray-300">Projects</a>
+            </li>
+            <li className={`${menuOpen? 'mb-3':''}`}>
+                <a href="#about" className="text-white text-base font-semibold px-8 py-2 transition-colors duration-200 hover:text-gray-300">About Me</a>
+            </li>
+            <li className={`${menuOpen? 'mb-3':''}`}>
+                <a href="#contact" className="text-white text-base font-semibold px-8 py-2 transition-colors duration-200 hover:text-gray-300">Contact Me</a>
+            </li>
+            <li className={`${menuOpen? 'mb-3':''}`}>
+                <a 
+                    href="https://github.com/ejimnkonye1" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-white text-base font-semibold px-8 py-2 border-2 border-[#5494FF] transition-colors duration-200 hover:bg-[#5494FF] hover:text-white"
                 >
-                    {menuOpen ? (
-                        <MdOutlineCancel className="text-white text-2xl" />
-                    ) : (
-                        <RxHamburgerMenu className="text-white text-2xl" />
-                    )}
-                </button>
-            
-                <ul 
-                    className={`flex-col md:flex-row items-center list-none m-2 p-2 transition-all duration-300 ${menuOpen ? 'flex' : 'hidden md:flex'} absolute md:static top-full left-0 w-full bg-gray-800 md:bg-transparent`}
-                >
-                    <li>
-                        <a href="#stack" className="text-white text-base font-semibold px-8 py-2 transition-colors duration-200 hover:text-gray-300">Tech Stack</a>
-                    </li>
-                    <li>
-                        <a href="#projects" className="text-white text-base font-semibold px-8 py-2 transition-colors duration-200 hover:text-gray-300">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#about" className="text-white text-base font-semibold px-8 py-2 transition-colors duration-200 hover:text-gray-300">About Me</a>
-                    </li>
-                    <li>
-                        <a href="#contact" className="text-white text-base font-semibold px-8 py-2 transition-colors duration-200 hover:text-gray-300">Contact Me</a>
-                    </li>
-                    <li>
-                        <a 
-                            href="https://github.com/ejimnkonye1" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="text-white text-base font-semibold px-8 py-2 border-2 border-[#5494FF] transition-colors duration-200 hover:bg-[#5494FF] hover:text-white"
-                        >
-                            My Github
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-   
+                    My Github
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
       <div className="hero-inner flex flex-col items-center justify-center text-center p-8 text-white">
   <p className="sub-heading text-lg" data-aos="fade-up" data-aos-delay="400"  data-aos-duration="1000">Hey, I'm Ejimnkonye-Onyedika. I am a</p>
   <div className="hero-heading">

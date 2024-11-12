@@ -4,7 +4,7 @@ import { TbMailFilled } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
 export const  Footer = () => {
     return(
-      <footer className="bg-black h-full" style={{ fontFamily: 'clashGrotesk' }} id="contact">
+      <footer className="bg-black h-full"  id="contact">
             <div className="container mx-auto p-4 md:p-8 lg:p-12">
                 <h5 className="uppercase text-lg mb-2 text-white font-black font-serif text-2xl">CONTACT ME</h5>
                 <ul className="space-y-4 p-2 md:p-2 lg:p-2 text-lg md:text-2xl sm:text-base">
@@ -21,7 +21,7 @@ export const  Footer = () => {
                     </li>
 
                     <li className="flex items-center space-x-4">
-                        <div className="cir-img w-14 h-14 rounded-full flex items-center justify-center" style={{ backgroundColor: '#222222' }}>
+                        <div className="cir-img w-14 h-14 rounded-full flex items-center justify-center bg-[#222222]">
                             <FaGithub className="text-white w-6 h-6" />
                         </div>
                         <div className="flex items-center space-x-2">
