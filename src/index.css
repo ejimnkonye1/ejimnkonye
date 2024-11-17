@@ -45,7 +45,7 @@
       animation: 1s spin linear infinite;
     }
     .loader:after {
-      color: #FF3D00;
+      color: #457AD4;
       transform: rotateY(70deg);
       animation-delay: .4s;
     }
@@ -81,59 +81,3 @@
   }
 
 
-  
-  /* Media query for mobile devices */
-  /* @media only screen and (max-width: 768px) {
-    .toggle-menu {
-      display: block;
-    }
-  
-    .nav-list {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #333;
-      padding: 1rem;
-      flex-direction: column;
-      align-items: center;
-  
-    
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      z-index: 10 !important;
-    }
-  
-    .nav-list li {
-      margin-bottom: 1rem;
-    }
-  
-    .nav-list li:last-child {
-      margin-bottom: 0;
-    }
-  
-    .logo {
-      padding-left: 0;
-    }
-  
-   
-  .nav-list.open {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #457AD4;
-  padding: 9rem;
-  position: absolute;
-  top: 0;
-
-  width: 100%;
-
-  z-index: 3 !important;
-}
-  } */
-  
-
-
-  

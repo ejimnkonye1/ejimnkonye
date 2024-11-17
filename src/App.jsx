@@ -2,6 +2,7 @@
 import { About } from "./components/about";
 import { Footer } from "./components/Footer";
 import {   Hero } from "./components/hero";
+import { Navbar } from "./components/navbar";
 import { Projects } from "./components/project";
 import { Stack } from "./components/stack";
 import { useState, useEffect } from "react";
@@ -36,7 +37,7 @@ function App() {
 <div>
 <Layout>
 
-
+<Navbar />
   <Hero />
  
   <Stack />

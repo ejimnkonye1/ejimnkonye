@@ -59,7 +59,7 @@ export const Stack = () => {
     <p className="text-gray-700 font-semibold">Tailwindcss</p>
   </div>
   
-  {/* Column 5 */}
+
   <div className="flex flex-col items-center p-4">
     <img 
       src={img5}
@@ -69,7 +69,7 @@ export const Stack = () => {
     <p className="text-gray-700 font-semibold">ReactJs</p>
   </div>
   
-  {/* Column 6 */}
+
   <div className="flex flex-col items-center p-4">
     <img 
       src={img6}

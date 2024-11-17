@@ -5,7 +5,7 @@ export const  About = () => {
   
     return(
       <section className="border-t-2 border-black my-4 py-4"  id='about'>
-   <div className=" min-h-screen ">
+   <div className=" lg:min-h-screen ">
    <div className="container mx-auto p-4 md:p-8 lg:p-12">
     <h3 className="text-lg font-black font-serif font-bold mb-4">ABOUT ME</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-[18px] md:p-[2px]">
@@ -23,7 +23,7 @@ export const  About = () => {
           <p className="text-gray-700 mb-4 text-base font-gotham tracking-tight leading-6 ">
           Hi there! I'm Ejimnkonye Onyedika, a web developer from Nigeria with 2 years of experience. Although I've been involved in web development for a while,
           my passion truly blossomed when I decided to take it seriously.
-          Coding, and playing football manager  fill my days with excitement
+          Coding, and playing football manager games  fill my days with excitement
           </p>
           <p className="text-gray-700 mb-4">
       
