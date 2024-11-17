@@ -264,8 +264,8 @@ const handlePreviousFoodImage = () => {
 
 
     <div className="flex space-x-4 mt-6">
-      <a  href="https://math-circus.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white live-site text-nowrap bg-[#457AD4] border border-black rounded-[0.3rem] p-[0.4rem] px-[1em] text-white shadow-[3px_3px_#000] text-[1.1rem] inline-flex items-center ">Live Site <HiMiniArrowTopRightOnSquare /></a>
-      <a  href="https://github.com/ejimnkonye1/MathCircus" target="_blank" rel="noopener noreferrer" className="text-white live-site text-nowrap bg-[#353535] border border-black rounded-[0.3rem] p-[0.1rem] px-[1em] text-white shadow-[3px_3px_#000] text-[1.0rem] inline-flex items-center mr-[1rem]">Source Code <FaGithub /></a>
+      <a  href="https://chickbite.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white live-site text-nowrap bg-[#457AD4] border border-black rounded-[0.3rem] p-[0.4rem] px-[1em] text-white shadow-[3px_3px_#000] text-[1.1rem] inline-flex items-center ">Live Site <HiMiniArrowTopRightOnSquare /></a>
+      <a  href="https://github.com/ejimnkonye1/foodstore" target="_blank" rel="noopener noreferrer" className="text-white live-site text-nowrap bg-[#353535] border border-black rounded-[0.3rem] p-[0.1rem] px-[1em] text-white shadow-[3px_3px_#000] text-[1.0rem] inline-flex items-center mr-[1rem]">Source Code <FaGithub /></a>
     </div>
   </div>
   <div className="flex justify-center order-1 md:order-2">
