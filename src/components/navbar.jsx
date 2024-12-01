@@ -15,7 +15,7 @@ export const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     return(
-        <header className={`flex justify-between items-center fixed top-0 p-4 bg-transparent z-10  w-full ${scrolled? 'bg-gray-700 ':''}`}>
+        <header className={`flex justify-between items-center fixed top-0 p-4 z-10  w-full ${scrolled? 'bg-gray-700 ':''}`}>
         <a href="/" className={`font-black text-[1.9rem] font-[500] font-clash  pl-8 tracking-tight ${scrolled?'text-[#457AD4]':'text-[]'}`}>
             EO
         </a>
