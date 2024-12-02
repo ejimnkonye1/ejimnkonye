@@ -4,7 +4,7 @@ import img from '../assets/background.png';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
-import res from '../assets/Resume-Onyedika.pdf';
+import res from '../assets/Onyedika.pdf';
 
 export const Hero =()=> {
   useEffect(() => {
