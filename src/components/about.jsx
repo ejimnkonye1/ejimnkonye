@@ -1,50 +1,78 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import img1 from '../images/image (1).png'
-export const  About = () => {
-  
-    return(
-      <section className="border-t-2 border-black my-4 py-4"  id='about'>
-   <div className=" lg:min-h-screen ">
-   <div className="container mx-auto p-4 md:p-8 lg:p-12">
-    <h3 className="text-lg font-black font-serif font-bold mb-4">ABOUT ME</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-[18px] md:p-[2px]">
-        
-        <div className="flex justify-center">
-          <img 
-            src={img1}
-            alt="About Me" 
-            className="rounded-lg  w-full h-auto object-cover"
-          />
-        </div>
-  
-        <div>
-       
-          <p className="text-gray-700 mb-4 text-base font-gotham tracking-tight leading-6 ">
-          Hi there! I'm Ejimnkonye Onyedika, a web developer from Nigeria with 2 years of experience. Although I've been involved in web development for a while,
-          my passion truly blossomed when I decided to take it seriously.
-          Coding, and playing football manager games  fill my days with excitement
-          </p>
-          <p className="text-gray-700 mb-4">
-      
-          </p>
-          <p className="text-gray-700 text-base font-gotham tracking-tight leading-6 mb-8" >
-          Beyond web development, I enjoy watching movies, playing video games, and listening to music
-          </p>
-          <div className="mt-2">
-            <button className="message  font-semibold text-white bg-[#457AD4] border border-black rounded-md py-3 px-4 text-white shadow-md text-base inline-flex items-center mr-4" >
-                     <a  href="mailto:ejimnkonyeonyedika@gmail.com" target="_blank">
-                     Send me a message
-                     </a>
+/* eslint-disable react/no-unescaped-entities */
+import { useEffect, useRef } from "react";
+import img1 from '../images/image (1).png';
 
-            </button>
+export const About = () => {
+  const backgroundRef = useRef(null);
+
+  useEffect(() => {
+    const createParticles = () => {
+      const numParticles = 20; // Number of floating dots
+      for (let i = 0; i < numParticles; i++) {
+        const particle = document.createElement("div");
+        particle.className = "blue-dot";
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+        backgroundRef.current.appendChild(particle);
+      }
+    };
+    createParticles();
+  }, []);
+
+  return (
+    <section className="relative py-16 border-t-2 border-black  overflow-hidden" id="about">
+      {/* Animated Background Dots */}
+      <div ref={backgroundRef} className="absolute inset-0 -z-10"></div>
+
+      <div className="relative container mx-auto px-6 md:px-12 lg:px-16">
+        <div className="text-center mb-12 animate-fadeIn">
+          <h3 className="text-3xl font-bold text-gray-900 uppercase tracking-wide">About Me</h3>
+          <p className="text-gray-600 text-lg mt-2">Passionate Developer & Problem Solver</p>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          {/* Image Section */}
+          <div className="flex-1 flex justify-center animate-fadeUp">
+            <img 
+              src={img1} 
+              alt="Ejimnkonye Onyedika - Web Developer" 
+              className="rounded-lg w-full max-w-sm object-cover shadow-2xl transform hover:scale-105 transition-all duration-300"
+            />
+          </div>
+
+          {/* Text Section */}
+          <div className="flex-1  bg-opacity-60 backdrop-blur-md p-6 rounded-lg  animate-fadeIn">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Hi there! I'm <span className="font-semibold text-[#457AD4]">Ejimnkonye Onyedika</span>, a web developer from Nigeria with 
+              <span className="font-semibold"> 2 years of experience</span>. 
+              I have always been fascinated by technology, but my journey truly began when I committed to learning web development.
+            </p>
+
+            <p className="text-gray-700 text-lg leading-relaxed mt-4">
+              I specialize in building intuitive user experiences, solving complex problems, and crafting responsive designs. When I’m not coding, you’ll find me 
+              playing football manager games, watching movies, or diving into a new video game.
+            </p>
+
+            {/* Contact Button */}
+            <div className="mt-6">
+              <a 
+                href="mailto:ejimnkonyeonyedika@gmail.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#457AD4] text-white font-semibold py-3 px-6 rounded-lg shadow-md 
+                hover:bg-[#365FA3] hover:shadow-lg transition-all duration-300"
+              >
+                Let's Connect
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-      </section>
-   
+
   
-    )
-  }
+    </section>
+  );
+};

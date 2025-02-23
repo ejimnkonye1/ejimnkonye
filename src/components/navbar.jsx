@@ -15,9 +15,13 @@ export const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     return(
-        <header className={`flex justify-between items-center fixed top-0 p-4 z-10  w-full ${scrolled? 'bg-gray-700 ':''}`}>
-        <a href="/" className={`font-black text-[1.9rem] font-[500] font-clash  pl-8 tracking-tight ${scrolled?'text-[#457AD4]':'text-[]'}`}>
-            EO
+        <header className={`flex justify-between items-center fixed top-0 p-4 z-40  w-full ${scrolled? 'bg-gray-700 ':''}`}>
+        <a href="/" className={`font-black text-[1.5rem] font-[500] font-clash  pl-8 tracking-tight ${scrolled?'text-[#457AD4]':'text-white'}`}>
+            Billie
+            <span className="relative inline-flex size-3 ml-1">
+    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+    <span className="relative inline-flex size-3 rounded-full bg-[#457AD4]"></span>
+  </span>
         </a>
         <nav className="flex items-center z-10">
             <button 

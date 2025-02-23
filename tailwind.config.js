@@ -11,6 +11,7 @@ export default {
           'clash': ['"Clash Grotesk"', 'sans-serif'],
           'gotham': ['"Gotham"', 'sans-serif'],
           'serif': ['"Serif"', 'serif'],
+          'poppins': ["Poppins", "sans-serif"],
         },
       },
     },
