@@ -24,7 +24,7 @@ export const Footer = () => {
         </div>
 
         {/* Middle Section */}
-        <div className="hidden lg:flex flex-col">
+        <div className="hidden lg:flex md:flex flex-col">
           <h3 className="text-xl font-semibold relative">Quick Links
           <span className="absolute left-0 bottom-0 w-20 top-7 h-[2px] bg-blue-500"></span>
           </h3>
