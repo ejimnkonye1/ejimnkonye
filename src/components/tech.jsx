@@ -25,17 +25,19 @@ const TechStack = () => {
       <p className="text-center text-lg mb-6 max-w-3xl mx-auto">
         These technologies form the foundation of my expertise, gained through hands-on projects and continuous learning. I actively explore new developments to keep my skills sharp and relevant.
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 gap-4  max-w-5xl mx-auto">
       {techStack.map((tech, index) => (
+                
                     <div
-                        key={index}
-                        className="flex flex-col items-center justify-center bg-gray-800 p-6 rounded-xl shadow-lg transition-all hover:bg-gray-700 hover:scale-105 group"
-                    >
+                    key={index}
+                    className="flex flex-col items-center justify-center bg-gray-800 p-6 rounded-xl transition-all duration-300 ease-in-out hover:bg-gray-700 hover:scale-105 group m-1"
+                >
+                    
                         <span className="text-4xl mb-2">{tech.icon}</span>
-                        <p className="text-lg font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 
+                        <p className="lg:text-lg text-sm font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 
                         after:w-full after:h-[2px] after:bg-blue-400 after:scale-x-0 
-                        after:transition-transform after:duration-300 after:ease-in-out 
-                        group-hover:after:scale-x-100 group-hover:pb-1">
+                        after:transition-transform after:duration-300 after:ease-in-out  
+                        group-hover:after:scale-x-100 ">
                             {tech.name}
                         </p>
                     </div>

@@ -33,9 +33,9 @@ export const Projects = () => {
   };
 
   return (
-    <div className="bg-white-100 min-h-screen" id="projects">
-      <div className="container mx-auto p-4 md:p-8 lg:p-12">
-      <h1 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6]" >My Tech Journey</h1>
+    <div className="bg-white-100 min-h-screen pt-20" id="projects">
+      <div className="container mx-auto p-4 md:p-8 lg:p-12 pt-[10px]">
+      <h1 className="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6]" >My Tech Journey</h1>
 <p className="text-center text-lg mb-6 max-w-3xl mx-auto">
   Explore my diverse portfolio, where innovation meets problem-solving. Each project highlights  
   challenges overcome and skills refined. Dive in and discover the technologies that fuel my passion!

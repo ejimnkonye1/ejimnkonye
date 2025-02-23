@@ -54,13 +54,13 @@
   
 
 
-
+import { IoMdArrowDropright } from "react-icons/io";
 import { FaLinkedin, FaTwitter, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#0D1B2A] text-white py-10">
-      <div className="container mx-auto px-6 grid md:grid-cols-4 gap-10">
+    <footer className="bg-[#0D1B2A] text-white py-10 p-4 " id="contact">
+      <div className="container p-10 mx-auto px-6 grid md:grid-cols-4 gap-10">
         {/* Left Section */}
         <div>
         <h2 className="text-3xl font-bold italic flex items-center">
@@ -76,20 +76,50 @@ export const Footer = () => {
         </div>
 
         {/* Middle Section */}
-        <div>
-          <h3 className="text-xl font-semibold underline decoration-blue-500">Quick Links</h3>
-          <ul className="mt-3 space-y-2 text-gray-300">
-            <li><a href="#home" className="hover:text-blue-500">Home</a></li>
-            <li><a href="#about" className="hover:text-blue-500">About</a></li>
-            <li><a href="#skills" className="hover:text-blue-500">Skills</a></li>
-            <li><a href="#projects" className="hover:text-blue-500">Projects</a></li>
-            <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
-          </ul>
+        <div className="hidden lg:flex flex-col">
+          <h3 className="text-xl font-semibold relative">Quick Links
+          <span className="absolute left-0 bottom-0 w-20 top-7 h-[2px] bg-blue-500"></span>
+          </h3>
+          <ul className="mt-3 space-y-4 text-gray-300">
+      <li>
+        <a href="#home" className="flex items-center hover:text-blue-500">
+          <IoMdArrowDropright className="mr-2" />
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#about" className="flex items-center hover:text-blue-500">
+          <IoMdArrowDropright className="mr-2" />
+          About
+        </a>
+      </li>
+      <li>
+        <a href="#skills" className="flex items-center hover:text-blue-500">
+          <IoMdArrowDropright className="mr-2" />
+          Skills
+        </a>
+      </li>
+      <li>
+        <a href="#projects" className="flex items-center hover:text-blue-500">
+          <IoMdArrowDropright className="mr-2" />
+          Projects
+        </a>
+      </li>
+      <li>
+        <a href="#contact" className="flex items-center hover:text-blue-500">
+          <IoMdArrowDropright className="mr-2" />
+          Contact
+        </a>
+      </li>
+    </ul>
         </div>
 
         {/* Right Section - Contact Form (Takes more space) */}
         <div className="md:col-span-2 lg:col-span-2">
-          <h3 className="text-xl font-semibold underline decoration-blue-500">Send a Message</h3>
+        <h3 className="text-xl font-semibold relative">
+  Send a Message
+  <span className="absolute left-0 bottom-0 w-20 top-7 h-[2px] bg-blue-500"></span>
+</h3>
           <form className="mt-3">
             <input type="text" placeholder="Your Name" className="w-full p-4 mb-3 rounded bg-gray-700 text-white" />
             <input type="email" placeholder="Your Email" className="w-full p-4 mb-3 rounded bg-gray-700 text-white" />

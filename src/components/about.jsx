@@ -1,35 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useRef } from "react";
+
 import img1 from '../images/image (1).png';
 
 export const About = () => {
-  const backgroundRef = useRef(null);
 
-  useEffect(() => {
-    const createParticles = () => {
-      const numParticles = 20; // Number of floating dots
-      for (let i = 0; i < numParticles; i++) {
-        const particle = document.createElement("div");
-        particle.className = "blue-dot";
-        particle.style.top = `${Math.random() * 100}%`;
-        particle.style.left = `${Math.random() * 100}%`;
-        particle.style.animationDelay = `${Math.random() * 5}s`;
-        backgroundRef.current.appendChild(particle);
-      }
-    };
-    createParticles();
-  }, []);
 
   return (
-    <section className="relative py-16 border-t-2 border-black  overflow-hidden" id="about">
-      {/* Animated Background Dots */}
-      <div ref={backgroundRef} className="absolute inset-0 -z-10"></div>
-
-      <div className="relative container mx-auto px-6 md:px-12 lg:px-16">
+    <section className="relative py-16 border-t-2 border-black pt-20 overflow-hidden" id="about">
+      <div className="relative container mx-auto px-6 md:px-12 lg:px-16 pt-[30px]">
         <div className="text-center mb-12 animate-fadeIn">
-          <h3 className="text-3xl font-bold text-gray-900 uppercase tracking-wide">About Me</h3>
+          <h3 className="text-3xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6]" >About Me</h3>
           <p className="text-gray-600 text-lg mt-2">Passionate Developer & Problem Solver</p>
         </div>
 

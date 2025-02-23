@@ -17,6 +17,7 @@ export const Hero =()=> {
       data-aos="fade-up"
       data-aos-delay="0"
       data-aos-duration="2000"
+      id="home"
     >
       <div className="hero-inner flex flex-col items-center justify-center text-center p-8 pt-[140px] text-white">
         <p
