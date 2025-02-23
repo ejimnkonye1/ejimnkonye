@@ -4,8 +4,9 @@ import { Footer } from "./components/Footer";
 import {   Hero } from "./components/hero";
 import { Navbar } from "./components/navbar";
 import { Projects } from "./components/project";
-import { Stack } from "./components/stack";
+
 import { useState, useEffect } from "react";
+import TechStack from "./components/tech";
 
 const Loader = () => (
   <div className="flex items-center justify-center h-screen">
@@ -39,11 +40,12 @@ function App() {
 
 <Navbar />
   <Hero />
- 
-  <Stack />
+  <About/>
+ <TechStack />
+  
   <Projects />
    
-  <About/>
+
   <Footer />
   </Layout>
 </div>
