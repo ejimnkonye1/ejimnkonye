@@ -4,7 +4,7 @@ import img from '../assets/background.png';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
-import res from '../assets/Onyedika.pdf';
+import res from '../assets/resume.pdf';
 
 export const Hero =()=> {
   useEffect(() => {
@@ -49,7 +49,7 @@ export const Hero =()=> {
         <div className="hero-ctas md:flex-col md:items-center max-w-fit mx-auto relative z-40 mt-5 space-y-4 md:space-x-4">
           <a href="#projects" className="text-inherit no-underline">
             <button
-              className="projects px-4 py-2 font-semibold bg-[#457AD4] border border-black rounded py-1 px-4 text-white shadow-[3px_3px_0_black] text-[1.1rem]"
+              className="projects px-4 py-2 font-semibold bg-[#457AD4] border border-black rounded py-1 px-4 text-white shadow-[3px_3px_0_black] text-md lg:text-[1.1rem]"
               data-aos="fade-up"
               data-aos-delay="700" 
               data-aos-duration="1000"
@@ -57,9 +57,10 @@ export const Hero =()=> {
               My Projects
             </button>
           </a>
-          <a download href={res} className="text-inherit no-underline">
+
+          <a download href={res} className="text-inherit no-underline px-4">
             <button
-              className="px-4 py-2 rounded-lg font-semibold bg-transparent text-white border border-[#5494ff] py-1 px-4 text-[1.1rem] shadow-none"
+              className="px-4 py-2 rounded-lg font-semibold bg-transparent text-white border border-[#5494ff] py-1 px-4 text-md lg:text-[1.1rem] shadow-none"
               data-aos="fade-up"
               data-aos-delay="800" 
               data-aos-duration="1000"

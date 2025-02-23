@@ -18,7 +18,7 @@ export const ProjectCard = ({ project, currentIndex, onNext, onPrevious }) => {
   {project.technologies.map((tech, index) => (
     <li 
       key={index} 
-      className="bg-gray-300 font-gotham text-sm text-gray-800 border border-gray-500 rounded-lg px-2 py-1 opacity-90 hover:opacity-100 transition-opacity"
+      className="bg-gray-300 font-gotham text-sm text-gray-800 border border-gray-500 rounded-lg px-2 py-1 opacity-90 hover:opacity-100 transition-opacity cursor-pointer"
     >
       {tech}
     </li>

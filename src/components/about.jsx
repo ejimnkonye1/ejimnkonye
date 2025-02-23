@@ -29,7 +29,7 @@ export const About = () => {
           <div className="flex-1  bg-opacity-60 backdrop-blur-md p-6 rounded-lg  animate-fadeIn">
             <p className="text-gray-700 text-lg leading-relaxed">
               Hi there! I'm <span className="font-semibold text-[#457AD4]">Ejimnkonye Onyedika</span>, a web developer from Nigeria with 
-              <span className="font-semibold"> 2 years of experience</span>. 
+              <span className="font-semibold"> 5 years of experience</span>. 
               I have always been fascinated by technology, but my journey truly began when I committed to learning web development.
             </p>
 

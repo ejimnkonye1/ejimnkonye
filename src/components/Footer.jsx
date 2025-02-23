@@ -1,61 +1,9 @@
-// import { FaGithub } from "react-icons/fa6";
-// import { MdArrowOutward } from "react-icons/md";
-// import { TbMailFilled } from "react-icons/tb";
-// import { FaLinkedin } from "react-icons/fa";
-// export const  Footer = () => {
-//     return(
-//       <footer className="bg-black h-full"  id="contact">
-//             <div className="container mx-auto p-4 md:p-8 lg:p-12">
-//                 <h5 className="uppercase text-lg mb-2 text-white font-black font-serif text-2xl">CONTACT ME</h5>
-//                 <ul className="space-y-4 p-2 md:p-2 lg:p-2 text-lg md:text-2xl sm:text-base">
-//                     <li className="flex items-center space-x-4 text-sm lg:text-2xl text-base">
-//                         <div className="cir-img lg:w-14 md:h-14 w-12 h-12  bg-green-700 rounded-full flex items-center justify-center">
-//                             <TbMailFilled className="text-white w-6 h-6" />
-//                         </div>
-//                         <div className="flex items-center space-x-2">
-//                             <span className="foot-link underline cursor-pointer text-white font-clash font-semibold text-[1rem]  lg:text-2xl">
-//                                 <a href="mailto:ejimnkonyeonyedika@gmail.com" target="_blank" rel="noopener noreferrer">Send me an email</a>
-//                             </span>
-//                             <MdArrowOutward className="text-white text-2xl" />
-//                         </div>
-//                     </li>
 
-//                     <li className="flex items-center space-x-4">
-//                         <div className="cir-img lg:w-14 md:h-14 w-12 h-12 rounded-full flex items-center justify-center bg-[#222222]">
-//                             <FaGithub className="text-white w-6 h-6" />
-//                         </div>
-//                         <div className="flex items-center space-x-2">
-//                             <span className="foot-link underline cursor-pointer text-white font-clash font-semibold text-[1rem] lg:text-2xl">
-//                                 <a href="https://github.com/ejimnkonye1" target="_blank" rel="noopener noreferrer">Checkout my GitHub</a>
-//                             </span>
-//                             <MdArrowOutward className="text-white text-2xl" />
-//                         </div>
-//                     </li>
-//                     <li className="flex items-center space-x-4">
-//                         <div className="cir-img lg:w-14 md:h-14 w-12 h-12 rounded-full flex items-center justify-center bg-blue-700">
-//                         <FaLinkedin className="text-white w-6 h-6" />
-//                         </div>
-//                         <div className="flex items-center ">
-//                             <span className="foot-link underline cursor-pointer text-white font-clash font-semibold text-[1rem] lg:text-2xl">
-//                                 <a href="https://www.linkedin.com/in/ejimnkonye-onyedika" target="_blank" rel="noopener noreferrer">Message me on LinkedIn</a>
-//                             </span>
-//                             <MdArrowOutward className="text-white text-2xl" />
-//                         </div>
-//                     </li>
-//                 </ul>
-
-//                 <p className="text-gray-600 text-center py-5">© Designed and built by Ejimnkonye Onyedika.</p>
-//             </div>
-//         </footer>
-  
-//     )
-//   }
-
-  
 
 
 import { IoMdArrowDropright } from "react-icons/io";
 import { FaLinkedin, FaTwitter, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
+import { ContactForm } from "./form";
 
 export const Footer = () => {
   return (
@@ -120,24 +68,18 @@ export const Footer = () => {
   Send a Message
   <span className="absolute left-0 bottom-0 w-20 top-7 h-[2px] bg-blue-500"></span>
 </h3>
-          <form className="mt-3">
-            <input type="text" placeholder="Your Name" className="w-full p-4 mb-3 rounded bg-gray-700 text-white" />
-            <input type="email" placeholder="Your Email" className="w-full p-4 mb-3 rounded bg-gray-700 text-white" />
-            <textarea placeholder="Your Message" className="w-full p-4 mb-3 rounded bg-gray-700 text-white h-32"></textarea>
-            <button className="w-full bg-blue-400 hover:bg-blue-500 text-white py-3 rounded flex justify-center items-center">
-              Send Message <span className="ml-2">📩</span>
-            </button>
-          </form>
+         <ContactForm/>
         </div>
+        
       </div>
 
       {/* Social Icons */}
       <div className="mt-10 flex justify-center space-x-6 text-gray-300">
-        <a href="#" className="text-2xl hover:text-white"><FaLinkedin /></a>
-        <a href="#" className="text-2xl hover:text-white"><FaTwitter /></a>
-        <a href="#" className="text-2xl hover:text-white"><FaInstagram /></a>
-        <a href="#" className="text-2xl hover:text-white"><FaGithub /></a>
-        <a href="#" className="text-2xl hover:text-white"><FaEnvelope /></a>
+        <a href="https://www.linkedin.com/in/ejimnkonye-onyedika" target="_blank"  className="text-2xl hover:text-white"><FaLinkedin /></a>
+        <a href="https://x.com/Ejimnkonye" target="_blank"  className="text-2xl hover:text-white"><FaTwitter /></a>
+        <a href="https://www.instagram.com/billie_jrn/" target="_blank"  className="text-2xl hover:text-white"><FaInstagram /></a>
+        <a href="https://github.com/ejimnkonye1" target="_blank"  className="text-2xl hover:text-white"><FaGithub /></a>
+        <a href="mailto:ejimnkonyeonyedika@gmail.com" target="_blank"  className="text-2xl hover:text-white"><FaEnvelope /></a>
       </div>
 
       {/* Copyright Section */}
