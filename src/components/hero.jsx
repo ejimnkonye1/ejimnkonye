@@ -1,83 +1,130 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import img from '../assets/background.png';
-import { useEffect } from 'react';
-import 'aos/dist/aos.css';
-import Aos from 'aos';
+import { useEffect, useState } from 'react';
+import { FaArrowRight, FaDownload } from 'react-icons/fa';
+import { HeroScene } from './Scene3D';
 import res from '../assets/resume.pdf';
 
-export const Hero =()=> {
+const GridBackground = () => (
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div
+      className="absolute inset-0 opacity-[0.03]"
+      style={{
+        backgroundImage: `linear-gradient(rgba(124,58,237,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(124,58,237,0.3) 1px, transparent 1px)`,
+        backgroundSize: '60px 60px',
+      }}
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark-900" />
+  </div>
+);
+
+export const Hero = () => {
+  const [visible, setVisible] = useState(false);
+  const roles = ['Software Developer', 'Frontend Engineer', 'React Specialist', 'Problem Solver'];
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
   useEffect(() => {
-    Aos.init();
+    setVisible(true);
   }, []);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    let timeout;
+
+    if (!isDeleting && text === currentRole) {
+      timeout = setTimeout(() => setIsDeleting(true), 2000);
+    } else if (isDeleting && text === '') {
+      setIsDeleting(false);
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    } else {
+      timeout = setTimeout(() => {
+        setText(
+          isDeleting
+            ? currentRole.substring(0, text.length - 1)
+            : currentRole.substring(0, text.length + 1)
+        );
+      }, isDeleting ? 50 : 100);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, roleIndex]);
 
   return (
     <section
-      className="relative hero text-white overflow-hidden bg-gradient-to-br from-[#457AD4] to-[#254375] h-[29rem] lg:h-screen w-full"
-      data-aos="fade-up"
-      data-aos-delay="0"
-      data-aos-duration="2000"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-900"
       id="home"
     >
-      <div className="hero-inner flex flex-col items-center justify-center text-center p-8 pt-[140px] text-white">
-        <p
-          className="sub-heading text-lg"
-          data-aos="fade-up"
-          data-aos-delay="400"
-          data-aos-duration="1000"
-        >
-          Hey, I'm Ejimnkonye-Onyedika. I am a
-        </p>
-        <div className="hero-heading">
-          <h1
-            className="lg:text-6xl md:text-4xl text-2xl tracking-[0px] font-bold"
-            data-aos="fade-up"
-            data-aos-delay="500"
-            data-aos-duration="1000"
-          >
-            SOFTWARE DEVELOPER
-          </h1>
-        </div>
-        <p
-          className="hero-intro md:mt-4 text-md max-w-md leading-6 font-sans"
-          data-aos="fade-up"
-          data-aos-delay="600" 
-          data-aos-duration="3600"
-        >
-          Passionate about building efficient and scalable software solutions, I specialize in creating seamless user experiences. Let's collaborate and bring innovative ideas to life!
-        </p>
-        <div className="hero-ctas md:flex-col md:items-center max-w-fit mx-auto relative z-40 mt-5 space-y-4 md:space-x-4">
-          <a href="#projects" className="text-inherit no-underline">
-            <button
-              className="projects px-4 py-2 font-semibold bg-[#457AD4] border border-black rounded py-1 px-4 text-white shadow-[3px_3px_0_black] text-md lg:text-[1.1rem]"
-              data-aos="fade-up"
-              data-aos-delay="700" 
-              data-aos-duration="1000"
-            >
-              My Projects
-            </button>
-          </a>
+      <GridBackground />
 
-          <a download href={res} className="text-inherit no-underline px-4">
-            <button
-              className="px-4 py-2 rounded-lg font-semibold bg-transparent text-white border border-[#5494ff] py-1 px-4 text-md lg:text-[1.1rem] shadow-none"
-              data-aos="fade-up"
-              data-aos-delay="800" 
-              data-aos-duration="1000"
-            >
-              Resume
-            </button>
+      {/* 3D Scene Background */}
+      <HeroScene />
+
+      {/* Main Content */}
+      <div className={`relative z-10 max-w-4xl mx-auto px-6 text-center transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* Status Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8">
+          <span className="relative flex size-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex size-2 rounded-full bg-green-500"></span>
+          </span>
+          <span className="text-sm text-zinc-400">Available for work</span>
+        </div>
+
+        {/* Greeting */}
+        <p className="text-lg md:text-xl text-zinc-400 mb-4 font-light">
+          Hey, I'm <span className="text-white font-medium">Ejimnkonye Onyedika</span>
+        </p>
+
+        {/* Main Heading */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+          <span className="gradient-text">
+            {text}
+          </span>
+          <span className="inline-block w-[3px] h-[0.9em] bg-accent-purple ml-1 animate-blink align-middle"></span>
+        </h1>
+
+        {/* Description */}
+        <p className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed mb-10 font-light">
+          Passionate about building efficient and scalable software solutions.
+          I specialize in creating seamless user experiences with modern web technologies.
+          Let's collaborate and bring innovative ideas to life.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#projects" className="group btn-primary flex items-center gap-2">
+            View My Work
+            <FaArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
           </a>
+          <a download href={res} className="btn-outline flex items-center gap-2">
+            <FaDownload className="text-sm" />
+            Download Resume
+          </a>
+        </div>
+
+        {/* Stats */}
+        <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto">
+          {[
+            { number: '5+', label: 'Years Exp.' },
+            { number: '20+', label: 'Projects' },
+            { number: '10+', label: 'Technologies' },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="text-2xl md:text-3xl font-bold gradient-text">{stat.number}</p>
+              <p className="text-xs md:text-sm text-zinc-500 mt-1">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </div>
-      <img
-        src={img}
-        alt="Background pattern"
-        className="max-w-full relative bottom-0 opacity-90"
-        data-aos="fade-up"
-        data-aos-delay="1200" 
-        data-aos-duration="1000" 
-      />
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-slow">
+        <span className="text-xs text-zinc-500 tracking-widest uppercase">Scroll</span>
+        <div className="w-5 h-8 rounded-full border border-zinc-700 flex items-start justify-center p-1">
+          <div className="w-1 h-2 rounded-full bg-accent-purple animate-pulse"></div>
+        </div>
+      </div>
     </section>
   );
-}
+};
