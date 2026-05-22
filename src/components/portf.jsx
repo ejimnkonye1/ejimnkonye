@@ -1,36 +1,5 @@
 import { useState, useEffect } from 'react';
-import { 
-  FaGithub, 
-  FaTwitter, 
-  FaMedium, 
-  FaEnvelope, 
-  FaCheckCircle,
-  FaChevronDown,
-  FaExternalLinkAlt,
-  FaDownload,
-  FaArrowRight,
-  FaSun,
-  FaMoon
-} from 'react-icons/fa';
-import { 
-  SiTypescript, 
-  SiJavascript, 
-  SiReact, 
-  SiNodedotjs, 
-  SiElectron, 
-  SiSupabase, 
-  SiPython, 
-  SiPostgresql, 
-  SiMongodb, 
-  SiPrisma, 
 
-  SiBun, 
-  SiTailwindcss, 
-  SiDocker,
-  SiNextdotjs
-} from 'react-icons/si';
-import { FiExternalLink } from 'react-icons/fi';
-import { LuArrowUpRight, LuMail } from 'react-icons/lu';
 import { Footer } from './Footer';
 import CTA from './cta';
 import Blog from './blog';
@@ -69,7 +38,7 @@ export default function Portfolio() {
       <div className="min-h-screen bg-black text-white">
         <main className="min-h-screen bg-black">
           {/* Navigation */}
-          <Navbar toggleTheme={toggleTheme} theme={theme} />
+          {/* <Navbar toggleTheme={toggleTheme} theme={theme} /> */}
 
           <div className="max-w-2xl mx-auto px-6">
             {/* Hero Section */}

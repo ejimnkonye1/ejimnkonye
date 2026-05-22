@@ -8,62 +8,66 @@ export default function Experience() {
 
   const workExperience = [
     {
-      title: "DevStream",
-      role: "Founder & Full Stack Engineer",
-      period: "2025 - Present",
+      title: "Estyne International",
+      role: "Software Developer",
+      period: "04/2023 - Present",
       description:
-        "Building a Chrome extension + SaaS platform that records synchronized desktop and mobile website sessions for developers. Leading architecture, frontend systems, backend APIs, recording engine development, and product design.",
+        "Designed and developed responsive web applications using React.js, Node.js, Tailwind CSS, Bootstrap, Redux, and Firebase. Built a fully functional online store that reduced cart abandonment by 15%. Created a responsive landing page for a game application, resulting in a 25% increase in user engagement and sign-ups. Engineered and deployed a Hello API for geolocation and real-time weather forecasts, reducing latency by 30%. Utilized Docker for containerization and deployed projects to Vercel, contributing to 15% improvement in team efficiency. Experienced in agile methodologies, collaborating with UI/UX designers to ensure pixel-perfect designs and optimized performance.",
       technologies: [
-        "React",
-        "Next.js",
+        "React.js",
         "Node.js",
-        "Supabase",
         "Tailwind CSS",
-        "Chrome Extensions",
-      ],
-    },
-    {
-      title: "Creche Management System",
-      role: "Full Stack Developer",
-      period: "2024 - Present",
-      description:
-        "Developed a complete web-based creche management and communication system with dashboards for parents, staff, and admin. Built real-time messaging, attendance tracking, activity updates, meal tracking, and payment integration.",
-      technologies: [
-        "React",
-        "Firebase",
-        "Firestore",
-        "Node.js",
-        "Paystack",
-        "Material UI",
-      ],
-    },
-    {
-      title: "30-Day Challenge Platform",
-      role: "Frontend Engineer",
-      period: "2024 - 2025",
-      description:
-        "Designed and developed an interactive challenge platform featuring GitHub-style heatmaps, leaderboards, progress tracking, ranking systems, and responsive user dashboards with dark mode support.",
-      technologies: [
-        "React",
-        "Vite",
-        "Tailwind CSS",
+        "Bootstrap",
         "Redux",
-        "Framer Motion",
+        "Firebase",
+        "Docker",
+        "Vercel",
       ],
     },
     {
-      title: "Freelance & Startup Projects",
+      title: "HNG Tech",
+      role: "Frontend & Backend Developer",
+      period: "07/2024 - 09/2024",
+      description:
+        "Worked on full-stack development projects, building responsive web applications with modern frontend and backend technologies. Collaborated with teams to implement scalable solutions and integrate APIs for improved functionality.",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "API Integration",
+        "Git",
+        "CI/CD",
+      ],
+    },
+    {
+      title: "Genesys TechHub",
+      role: "Frontend Developer",
+      period: "09/2023 - 12/2023",
+      description:
+        "Developed and implemented responsive frontend components, collaborated with UI/UX designers to create pixel-perfect e-commerce platforms, improving user experience and site performance by 20%.",
+      technologies: [
+        "React.js",
+        "Tailwind CSS",
+        "UI/UX Collaboration",
+        "Responsive Design",
+      ],
+    },
+    {
+      title: "Freelance & Personal Projects",
       role: "Full Stack Developer",
       period: "2023 - Present",
       description:
-        "Worked on multiple startup and freelance projects including booking systems, real estate platforms, internal dashboards, authentication systems, and scalable APIs. Focused on building modern UI/UX and backend infrastructures.",
+        "Built multiple full-stack applications including e-commerce platforms, booking systems, real estate platforms, and internal dashboards. Proficient in Python backend development with Flask and Django, PostgreSQL and MongoDB databases. Experienced in cloud deployment on Vercel, Heroku, Render, and AWS Lambda. Adept at using Git, GitHub, and GitLab for version control with CI/CD pipelines.",
       technologies: [
-        "MongoDB",
-        "PostgreSQL",
-        "Express",
+        "Python",
         "Flask",
-        "TypeScript",
-        "Vue.js",
+        "Django",
+        "PostgreSQL",
+        "MongoDB",
+        "Express",
+        "AWS Lambda",
+        "Heroku",
+        "Render",
+        "Git/GitHub",
       ],
     },
   ];

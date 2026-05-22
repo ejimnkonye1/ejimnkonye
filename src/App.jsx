@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-import Portfolio from "./components/test";
+import Portfolio from "./components/portf";
 
 const Loader = () => (
   <div className="flex flex-col items-center justify-center h-screen bg-dark-900">

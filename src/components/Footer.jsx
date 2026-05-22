@@ -15,7 +15,7 @@ export const Footer = () => {
      <footer className="border-t border-white/10 py-8">
             <div className="max-w-2xl mx-auto px-6">
               <div className="flex items-center justify-between text-xs text-white/50">
-                <span>Designed &amp; Developed by Billiejrn</span>
+                <span>Designed &amp; Developed by Ejimnkonye Onyedika</span>
                 <span>2026</span>
               </div>
             </div>

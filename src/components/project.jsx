@@ -38,7 +38,7 @@ export const Projects = () => {
       desc: 'A developer-focused desktop dashboard for monitoring services, CPU/memory usage, network activity, and logs in real-time.',
       tags: ['Electron', 'React', 'Node.js', 'WebSocket'],
       liveUrl: 'https://dev-dock-two.vercel.app',
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/ejimnkonye1/DevDock',
       img: devdockImage // This is the imported image
     },
     {
@@ -46,7 +46,7 @@ export const Projects = () => {
       desc: 'A crypto exchange platform where users can buy, sell, and track cryptocurrencies with real-time market data and interactive charts.',
       tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'REST API'],
       liveUrl: 'https://www.oceaniccharts.com',
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/ejimnkonye1/Oceanic',
       img: oceanicImage // This is the imported image
     },
     {
@@ -54,7 +54,7 @@ export const Projects = () => {
       desc: 'An e-learning platform with course management, quizzes, leaderboards, rewards, and gamified progress tracking for students.',
       tags: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
       liveUrl: 'https://storra-web-fe.vercel.app',
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/ejimnkonye1/STORRA-WEB-FE',
       img: classoraImage // This is the imported image
     },
        {
