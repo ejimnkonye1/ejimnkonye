@@ -1,6 +1,11 @@
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import oceanicImage from '../images/oceanic.png';
+import devdockImage from '../images/devdock.png';
+import classoraImage from '../images/classora.png';
+import creatives30Image from '../images/creative.png';
+import CareconnectImage from '../images/careconnect.png'
+
 
 export const Projects = () => {
   const projects = [
@@ -8,25 +13,25 @@ export const Projects = () => {
       title: "DevStream",
       desc: "A Chrome extension + SaaS platform that records synchronized desktop and mobile website sessions for developers. Includes replay system, dashboard, and session sharing.",
       tags: ["Chrome Extension", "React", "Node.js", "Supabase", "TypeScript"],
-      liveUrl: "https://devstream.vercel.app",
-      githubUrl: "https://github.com",
+      liveUrl: "https://devstream-sigma.vercel.app",
+      githubUrl: "https://github.com/ejimnkonye1/devstream",
       img: "/projects/devstream.png",
     },
     {
-      title: "Creche Management System",
+      title: "CareConnect",
       desc: "A full-stack platform for parents, staff, and admin with real-time messaging, attendance tracking, meal updates, payments, and activity logs.",
       tags: ["React", "Firebase", "Firestore", "Node.js", "Paystack"],
-      liveUrl: "https://creche-app.vercel.app",
-      githubUrl: "https://github.com",
-      img: "/projects/creche.png",
+      liveUrl: "https://care-connect-wine.vercel.app",
+      githubUrl: "https://github.com/ejimnkonye1/care-Connect",
+      img: CareconnectImage // This is the imported image
     },
     {
-      title: "30-Day Challenge Platform",
-      desc: "A gamified platform with GitHub-style heatmaps, rankings, progress tracking, leaderboards, and user streak systems.",
+      title: "Creatives30",
+      desc: "Creatives30 is a simple yet powerful platform where developers can submit projects, share progress, and explore others' work — perfect for code challenges like 30 Days of Code, build-in-public maraton.",
       tags: ["React", "Vite", "Tailwind CSS", "Redux"],
-      liveUrl: "#",
-      githubUrl: "https://github.com",
-      img: "/projects/challenge.png",
+      liveUrl: "https://creatives30.vercel.app",
+      githubUrl: "https://github.com/skidev101/creatives30",
+      img: creatives30Image // This is the imported image
     },
     {
       title: 'DevDock',
@@ -34,7 +39,7 @@ export const Projects = () => {
       tags: ['Electron', 'React', 'Node.js', 'WebSocket'],
       liveUrl: 'https://dev-dock-two.vercel.app',
       githubUrl: 'https://github.com',
-      img: '/projects/devdock.png'
+      img: devdockImage // This is the imported image
     },
     {
       title: 'Oceanic',
@@ -50,7 +55,15 @@ export const Projects = () => {
       tags: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
       liveUrl: 'https://storra-web-fe.vercel.app',
       githubUrl: 'https://github.com',
-      img: '/projects/classora.png'
+      img: classoraImage // This is the imported image
+    },
+       {
+      title: 'Estyne',
+      desc: 'An ecommerce webstite platform with course management, quizzes, leaderboards, rewards, and gamified progress tracking for students.',
+      tags: ['React', 'Supabase',  'Tailwind CSS'],
+      liveUrl: 'estyne-web.vercel.app',
+      githubUrl: 'https://github.com/ejimnkonye1/estyne-web',
+      img: classoraImage // This is the imported image
     },
   ];
 
