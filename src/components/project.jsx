@@ -1,240 +1,114 @@
-/* eslint-disable react/no-unescaped-entities */
-import { useEffect, useRef, useState } from "react";
-import { HiOutlineArrowUpRight, HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
-import { FaGithub, FaAngleRight, FaAngleLeft, FaCode } from "react-icons/fa6";
-import { projects, categories } from "./projectarray";
-import { ProjectsScene } from "./Scene3D";
-
-const ProjectCard = ({ project, isVisible, index }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const hasImages = project.images && project.images.length > 0;
-
-  const handleNext = () => {
-    if (hasImages) setCurrentIndex((prev) => (prev + 1) % project.images.length);
-  };
-  const handlePrev = () => {
-    if (hasImages) setCurrentIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
-  };
-
-  return (
-    <div
-      className={`group relative glass rounded-xl overflow-hidden transition-all duration-500 hover:border-white/15 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
-      style={{ transitionDelay: `${index * 80}ms` }}
-    >
-      {/* Gradient glow on hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/5 to-accent-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-      {/* Image Section */}
-      <div className="relative aspect-video bg-dark-700 overflow-hidden">
-        {hasImages ? (
-          <>
-            <img
-              src={project.images[currentIndex]}
-              alt={`${project.title} screenshot`}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            {/* Image navigation */}
-            {project.images.length > 1 && (
-              <>
-                <div className="absolute bottom-3 right-3 flex gap-1.5 z-10">
-                  <button
-                    onClick={handlePrev}
-                    disabled={currentIndex === 0}
-                    className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
-                      currentIndex === 0
-                        ? "bg-black/30 text-zinc-600 cursor-not-allowed"
-                        : "bg-accent-purple/80 hover:bg-accent-purple text-white"
-                    } backdrop-blur-sm`}
-                  >
-                    <FaAngleLeft className="w-3 h-3" />
-                  </button>
-                  <button
-                    onClick={handleNext}
-                    disabled={currentIndex === project.images.length - 1}
-                    className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
-                      currentIndex === project.images.length - 1
-                        ? "bg-black/30 text-zinc-600 cursor-not-allowed"
-                        : "bg-accent-purple/80 hover:bg-accent-purple text-white"
-                    } backdrop-blur-sm`}
-                  >
-                    <FaAngleRight className="w-3 h-3" />
-                  </button>
-                </div>
-                {/* Image counter */}
-                <div className="absolute top-3 right-3 glass rounded-full px-2.5 py-1 z-10">
-                  <span className="text-[10px] font-mono text-zinc-300">
-                    {currentIndex + 1}/{project.images.length}
-                  </span>
-                </div>
-              </>
-            )}
-          </>
-        ) : (
-          /* Placeholder for projects without images */
-          <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-dark-700 to-dark-800">
-            <FaCode className="text-3xl text-zinc-700 mb-2" />
-            <p className="text-xs text-zinc-600">Screenshots coming soon</p>
-          </div>
-        )}
-
-        {/* Category badge */}
-        <div className="absolute top-3 left-3 z-10">
-          <span className="text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-sm text-zinc-300 border border-white/10">
-            {project.category}
-          </span>
-        </div>
-
-        {/* Collab badge */}
-        {project.collab && (
-          <div className="absolute top-3 left-[110px] z-10">
-            <span className="text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded-full bg-accent-cyan/20 backdrop-blur-sm text-accent-cyan border border-accent-cyan/20">
-              Collab
-            </span>
-          </div>
-        )}
-      </div>
-
-      {/* Content Section */}
-      <div className="relative z-10 p-5">
-        <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-accent-purple transition-colors duration-300">
-          {project.title}
-        </h4>
-
-        <p className="text-zinc-500 text-sm leading-relaxed mb-4 line-clamp-2">
-          {project.description}
-        </p>
-
-        {/* Tech tags */}
-        <div className="flex flex-wrap gap-1.5 mb-4">
-          {project.technologies.map((tech, i) => (
-            <span
-              key={i}
-              className="px-2 py-0.5 text-[11px] font-medium text-zinc-400 rounded-md bg-white/5"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        {/* Links */}
-        <div className="flex items-center gap-3 pt-3 border-t border-white/5">
-          <a
-            href={project.sourceCode}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm text-zinc-400 hover:text-white transition-colors duration-200"
-          >
-            <FaGithub />
-            Code
-          </a>
-          {project.liveSite && (
-            <a
-              href={project.liveSite}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm text-zinc-400 hover:text-accent-purple transition-colors duration-200"
-            >
-              <HiMiniArrowTopRightOnSquare />
-              Live Demo
-            </a>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
+import oceanicImage from '../images/oceanic.png';
 
 export const Projects = () => {
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
-      },
-      { threshold: 0.05 }
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
-  const filteredProjects =
-    activeCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
+  const projects = [
+    {
+      title: "DevStream",
+      desc: "A Chrome extension + SaaS platform that records synchronized desktop and mobile website sessions for developers. Includes replay system, dashboard, and session sharing.",
+      tags: ["Chrome Extension", "React", "Node.js", "Supabase", "TypeScript"],
+      liveUrl: "https://devstream.vercel.app",
+      githubUrl: "https://github.com",
+      img: "/projects/devstream.png",
+    },
+    {
+      title: "Creche Management System",
+      desc: "A full-stack platform for parents, staff, and admin with real-time messaging, attendance tracking, meal updates, payments, and activity logs.",
+      tags: ["React", "Firebase", "Firestore", "Node.js", "Paystack"],
+      liveUrl: "https://creche-app.vercel.app",
+      githubUrl: "https://github.com",
+      img: "/projects/creche.png",
+    },
+    {
+      title: "30-Day Challenge Platform",
+      desc: "A gamified platform with GitHub-style heatmaps, rankings, progress tracking, leaderboards, and user streak systems.",
+      tags: ["React", "Vite", "Tailwind CSS", "Redux"],
+      liveUrl: "#",
+      githubUrl: "https://github.com",
+      img: "/projects/challenge.png",
+    },
+    {
+      title: 'DevDock',
+      desc: 'A developer-focused desktop dashboard for monitoring services, CPU/memory usage, network activity, and logs in real-time.',
+      tags: ['Electron', 'React', 'Node.js', 'WebSocket'],
+      liveUrl: 'https://dev-dock-two.vercel.app',
+      githubUrl: 'https://github.com',
+      img: '/projects/devdock.png'
+    },
+    {
+      title: 'Oceanic',
+      desc: 'A crypto exchange platform where users can buy, sell, and track cryptocurrencies with real-time market data and interactive charts.',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'REST API'],
+      liveUrl: 'https://www.oceaniccharts.com',
+      githubUrl: 'https://github.com',
+      img: oceanicImage // This is the imported image
+    },
+    {
+      title: 'Classora',
+      desc: 'An e-learning platform with course management, quizzes, leaderboards, rewards, and gamified progress tracking for students.',
+      tags: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      liveUrl: 'https://storra-web-fe.vercel.app',
+      githubUrl: 'https://github.com',
+      img: '/projects/classora.png'
+    },
+  ];
 
   return (
-    <section className="relative py-24 bg-dark-900 overflow-hidden" id="projects" ref={sectionRef}>
-      <div className="section-divider" />
-
-      {/* 3D Background */}
-      <ProjectsScene />
-
-      <div className="relative max-w-6xl mx-auto px-6 pt-16">
-        {/* Section Header */}
-        <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-sm font-medium tracking-widest uppercase text-accent-purple mb-3">My work</p>
-          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">Projects</h2>
-          <p className="text-zinc-400 text-base max-w-2xl mx-auto leading-relaxed">
-            Explore my diverse portfolio where innovation meets problem-solving. Each project highlights
-            challenges overcome and skills refined.
-          </p>
-        </div>
-
-        {/* Category Filter Tabs */}
-        <div className={`flex flex-wrap justify-center gap-2 mb-12 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {categories.map((cat) => {
-            const count = cat === "All" ? projects.length : projects.filter(p => p.category === cat).length;
-            return (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  activeCategory === cat
-                    ? "bg-accent-purple/20 text-white border border-accent-purple/40"
-                    : "text-zinc-500 hover:text-zinc-300 glass hover:border-white/15"
-                }`}
-              >
-                {cat}
-                <span className={`ml-1.5 text-xs ${activeCategory === cat ? 'text-accent-purple' : 'text-zinc-600'}`}>
-                  {count}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filteredProjects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={index}
-              isVisible={isVisible}
-            />
+    <div className="w-full fade-section" id="projects">
+      <section className="py-12">
+        <h2 className="text-xl font-semibold text-white mb-6">Projects</h2>
+        <div className="space-y-4">
+          {projects.map((project, idx) => (
+            <div key={idx} className="group relative flex flex-col sm:flex-row gap-4 sm:gap-6 p-4 sm:p-6 border border-white/10 rounded-lg bg-black/30 cursor-pointer overflow-hidden hover:border-white/20 transition-all">
+              <div className="flex-shrink-0 flex flex-col items-center">
+                <div className="relative w-full sm:w-52 h-40 sm:h-32 rounded-lg border border-white/20 bg-black overflow-hidden">
+                  {/* Fixed image rendering for regular React */}
+                  <img 
+                    src={typeof project.img === 'string' ? project.img : project.img}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.src = `https://placehold.co/400x200/1a1a1a/ffffff?text=${project.title}`;
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-500 transition-colors">{project.title}</h3>
+                  <p className="text-sm text-white/70 mb-4">{project.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, tagIdx) => (
+                      <span key={tagIdx} className="text-xs px-2 py-1 rounded border border-white/10 bg-white/5 text-white/50">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 mt-4">
+                  <a 
+                    href={project.liveUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded border border-white/10 hover:border-white/30 transition-colors text-white/70"
+                  >
+                    <FiExternalLink className="w-3.5 h-3.5" /> Live
+                  </a>
+                  {project.githubUrl && (
+                    <a 
+                      href={project.githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded border border-white/10 hover:border-white/30 transition-colors text-white/70"
+                    >
+                      <FaGithub className="w-3.5 h-3.5" /> GitHub
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
           ))}
         </div>
-
-        {/* View More Button */}
-        <div className="flex justify-center mt-16">
-          <a
-            href="https://github.com/ejimnkonye1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center gap-2 px-6 py-3 rounded-lg border border-zinc-700 text-zinc-300 hover:border-accent-purple hover:text-white transition-all duration-300 hover:bg-accent-purple/5"
-          >
-            <FaGithub className="text-lg" />
-            View More on GitHub
-            <HiOutlineArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
