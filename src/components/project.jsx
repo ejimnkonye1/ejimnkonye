@@ -5,8 +5,8 @@ import devdockImage from '../images/devdock.png';
 import classoraImage from '../images/classora.png';
 import creatives30Image from '../images/creative.png';
 import CareconnectImage from '../images/careconnect.png'
-
-
+import devstreamImage from '../images/devstream.png';
+import estyneImage from '../images/estyne.png';
 export const Projects = () => {
   const projects = [
     {
@@ -15,7 +15,7 @@ export const Projects = () => {
       tags: ["Chrome Extension", "React", "Node.js", "Supabase", "TypeScript"],
       liveUrl: "https://devstream-sigma.vercel.app",
       githubUrl: "https://github.com/ejimnkonye1/devstream",
-      img: "/projects/devstream.png",
+      img: devstreamImage,
     },
     {
       title: "CareConnect",
@@ -58,12 +58,12 @@ export const Projects = () => {
       img: classoraImage // This is the imported image
     },
        {
-      title: 'Estyne',
-      desc: 'An ecommerce webstite platform with course management, quizzes, leaderboards, rewards, and gamified progress tracking for students.',
+      title: 'EstyneTechspot',
+      desc: 'An ecommerce webstite platform where you can get quality products from surveillance cameras to solar solutions. All delivered to your doorstep with excellent customer service.',
       tags: ['React', 'Supabase',  'Tailwind CSS'],
       liveUrl: 'estyne-web.vercel.app',
       githubUrl: 'https://github.com/ejimnkonye1/estyne-web',
-      img: classoraImage // This is the imported image
+      img: estyneImage // This is the imported image
     },
   ];
 
