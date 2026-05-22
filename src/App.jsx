@@ -1,11 +1,8 @@
 /* eslint-disable react/prop-types */
-import { About } from "./components/about";
-import { Footer } from "./components/Footer";
-import { Hero } from "./components/hero";
-import { Navbar } from "./components/navbar";
-import { Projects } from "./components/project";
+
 import { useState, useEffect } from "react";
-import TechStack from "./components/tech";
+
+import Portfolio from "./components/portf";
 
 const Loader = () => (
   <div className="flex flex-col items-center justify-center h-screen bg-dark-900">
@@ -32,16 +29,13 @@ const Layout = ({ children }) => {
 
 function App() {
   return (
+
     <div className="bg-dark-900 min-h-screen">
       <Layout>
-        <Navbar  />
-        <Hero />
-        <About />
-        <TechStack />
-        <Projects />
-        <Footer />
+         <Portfolio/>
+     
       </Layout>
-    </div>
+    // </div>
   );
 }
 
